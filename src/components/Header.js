@@ -7,8 +7,22 @@ import {
   faTwitter,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
+import Menu from "./Menu";
+import { useStateValue } from "./../context/StateProvider";
+import { actionTypes } from "./../context/reducer";
 
 function Header() {
+  const [{}, dispatch] = useStateValue();
+
+  const handleOpenMenu = (e) => {
+    e.preventDefault();
+    const menu = { status: true };
+    dispatch({
+      type: actionTypes.SET_OPENMENU,
+      openedMenu: menu,
+    });
+  };
+
   return (
     <div className="header">
       <div className="headerContainer">
@@ -34,11 +48,12 @@ function Header() {
               <FontAwesomeIcon icon={faDiscord} />
             </span>
           </div>
-          <div className="menu">
+          <div className="menuButton" onClick={handleOpenMenu}>
             <h2>Menu.</h2>
           </div>
         </div>
       </div>
+      <Menu />
     </div>
   );
 }
