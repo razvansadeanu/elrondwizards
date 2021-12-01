@@ -38,13 +38,13 @@ function Menu() {
     let mounted = true;
     if (openedMenu.status && mounted) {
       gsap.to(menuLayer, { duration: 0, css: { visibility: "visible" } });
-      gsap.to(menuLayer, { duration: 0.5, x: 0, ease: "power3.inOut" });
+      gsap.to(menuLayer, { duration: 0.5, opacity: 1, ease: "power3.inOut" });
       staggerText(aboutLink, teamLink, roadLink, faqLink);
       socialFade(socialFb, socialIn, socialTw, socialGit, socialDis);
     } else {
       gsap.to(menuLayer, {
         duration: 0.5,
-        translateX: "-100%",
+        opacity: 0,
         ease: "power3.inOut",
       });
       gsap.to(menuLayer, {
