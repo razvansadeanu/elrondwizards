@@ -1,0 +1,58 @@
+.header {
+  border-bottom: 2px solid #616161;
+  color: white;
+  .headerContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    padding: 1rem;
+    font-family: "Spartan", sans-serif;
+    justify-content: space-between;
+    .logo {
+      .textSpace {
+        margin-left: 2.5rem;
+      }
+    }
+    .socialsMenu {
+      display: flex;
+      align-items: center;
+      .socials {
+        margin-right: 1.5rem;
+        span {
+          margin-left: 1.5rem;
+          font-size: 1.5rem;
+          transition: all 0.1s ease-in-out;
+          cursor: pointer;
+          .fa-w-16 {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+          .fa-w-14 {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+          .fa-w-20 {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+    .menu {
+      color: #41f2dd;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border: 2px solid #41f2dd;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
