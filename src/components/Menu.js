@@ -11,6 +11,7 @@ import gsap from "gsap";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { socialFade, staggerText } from "../animations/menu";
+import { buttonFade } from "../animations/banner";
 
 function Menu() {
   const [{ openedMenu }, dispatch] = useStateValue();
