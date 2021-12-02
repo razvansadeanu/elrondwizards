@@ -6,14 +6,19 @@ function Banner() {
   return (
     <div className="banner">
       <div className="textContainer">
-        <p>ARE YOU READY </p>
-        <p>FOR OUR MAGIC? </p>
+        <div>
+          <p>ARE YOU READY </p>
+          <p>
+            FOR OUR <span style={{ color: "#41f2dd" }}>MAGIC?</span>
+          </p>
+        </div>
         <div className="introText">
-          ELROND WIZARDS is a collection of 3,333 Unique NFTs shining on the
-          elrond blockcain
+          ELROND WIZARDS is a collection of{" "}
+          <span style={{ color: "#41f2dd" }}>3,333</span> Unique NFTs shining on
+          the elrond blockcain
         </div>
         <button className="claimButton">
-          <p>Claim now</p>
+          <p>BUY NOW</p>
         </button>
       </div>
       <div className="imageContainer">
@@ -24,7 +29,6 @@ function Banner() {
           <div className="mosaicItem4">
             <img src={testImg2} alt="" />
           </div>
-
           <div className="mosaicItem3">
             <img src={testImg} alt="" />
           </div>
@@ -34,6 +38,9 @@ function Banner() {
           <div className="mosaicItem">
             <img src={testImg} alt="" />
           </div>
+          <button className="secondClaimButton">
+            <p>BUY NOW</p>
+          </button>
         </div>
       </div>
     </div>
