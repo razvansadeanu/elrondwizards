@@ -1,6 +1,6 @@
 .header {
   border-bottom: 2px solid #616161;
-  color: white;
+  color: $white;
   .headerContainer {
     max-width: 1300px;
     margin: 0 auto;
@@ -60,12 +60,12 @@
       }
     }
     .menuButton {
-      color: #41f2dd;
+      color: $green;
       h2 {
         transition: all 0.2s ease-in-out;
         &:hover {
           cursor: pointer;
-          border: 2px solid #41f2dd;
+          border: 2px solid $green;
           padding: 10px;
           border-radius: 10px;
         }

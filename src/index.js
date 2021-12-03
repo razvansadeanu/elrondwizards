@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./style/App.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { StateProvider } from "./context/StateProvider";

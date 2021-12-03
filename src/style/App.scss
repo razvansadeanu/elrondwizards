@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Spartan:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import "./Breakpoints.scss";
+@import "./Variables.scss";
 @import "./HomePage.scss";
 @import "./Header.scss";
 @import "./Menu.scss";
 @import "./Banner.scss";
+@import "./About.scss";
 
 * {
   margin: 0;
 }
 
 body {
-  background: #0d2030;
+  background: $black;
 }
