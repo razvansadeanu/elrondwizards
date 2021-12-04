@@ -1,6 +1,5 @@
 .aboutContainer {
   margin-top: 3rem;
-  font-family: "Righteous", cursive;
   height: 900px;
   width: 100%;
   position: relative;
@@ -25,7 +24,6 @@
     flex-direction: column;
     justify-content: space-between;
     height: 900px;
-
     .titleText {
       display: flex;
       align-items: center;
@@ -53,39 +51,36 @@
       }
     }
   }
-  .aboutText {
-    padding: 1.5rem;
-    position: absolute;
-    text-align: justify;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
-    max-width: 1300px;
-    top: 70%;
-    font-size: 1.4rem;
+}
+.aboutText {
+  padding: 1.5rem;
+  text-align: justify;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 1300px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  position: relative;
+  top: -8rem;
+  @include media("<=900px") {
     letter-spacing: 0.1rem;
-    line-height: 2rem;
-    @include media("<=900px") {
-      letter-spacing: 0.1rem;
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-    }
-    @include media("<=700px") {
-      font-size: 1.1rem;
-      letter-spacing: 0rem;
-    }
-    .desktopText {
-      @include media("<=850px") {
-        display: none;
-      }
-    }
-    .phoneText {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  @include media("<=700px") {
+    font-size: 1.1rem;
+    letter-spacing: 0rem;
+  }
+  .desktopText {
+    @include media("<=850px") {
       display: none;
-      @include media("<=850px") {
-        display: block;
-      }
+    }
+  }
+  .phoneText {
+    display: none;
+    @include media("<=850px") {
+      display: block;
     }
   }
 }

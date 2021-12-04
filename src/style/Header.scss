@@ -6,7 +6,6 @@
     margin: 0 auto;
     display: flex;
     padding: 1.5rem;
-    font-family: "Spartan", sans-serif;
     justify-content: space-between;
     @include media("<=tablet") {
       padding: 1.2rem;

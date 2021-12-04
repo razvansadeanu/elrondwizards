@@ -16,11 +16,13 @@ function About() {
     };
   }, []);
   return (
-    <div className="aboutContainer">
-      <video src={video} playsInline autoPlay loop muted></video>
-      <div className="caption">
-        <div className="titleText" ref={(el) => (title = el)}>
-          <span></span>LEGEND OF...
+    <>
+      <div className="aboutContainer">
+        <video src={video} playsInline autoPlay loop muted></video>
+        <div className="caption">
+          <div className="titleText" ref={(el) => (title = el)}>
+            <span></span>LEGEND OF...
+          </div>
         </div>
       </div>
       <div className="aboutText">
@@ -35,7 +37,7 @@ function About() {
         <p className="desktopText">
           However, after many moons passed, people slowly became greedy, wanting
           more for themselves, forgetting about Mother Nature. Villages became
-          Cities; friends became enemies; brothers became strangers.During this
+          Cities; friends became enemies; brothers became strangers. During this
           decaying process, the marks left on nature seemed permanent, but then
           a powerful force awakened from its deep sleep; they decided that
           something needed to be done to save the world and redeem the innocence
@@ -62,7 +64,7 @@ function About() {
           ones, spreading the word around all corners of the world.
         </ReadMore>
       </div>
-    </div>
+    </>
   );
 }
 
