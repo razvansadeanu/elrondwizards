@@ -1,5 +1,7 @@
 import React from "react";
 import testImg from "./../static/Test.PNG";
+import RoadMapImg from "./../static/RoadMap4.PNG";
+import RoadMapImgPhone from "./../static/Phone.png";
 import AliceCarousel from "react-alice-carousel";
 
 function RoadMap() {
@@ -15,6 +17,7 @@ function RoadMap() {
     <img src={testImg} alt="" onDragStart={handleDragStart} />,
     <img src={testImg} alt="" onDragStart={handleDragStart} />,
   ];
+
   const responsive = {
     0: { items: 1 },
     320: { items: 2 },
@@ -40,7 +43,7 @@ function RoadMap() {
       <div className="roadMapContainer">
         <div className="roadMapTitle">
           <div className="roadMapTitleText">
-            ROADMAP<span></span>
+            MILESTONES<span></span>
           </div>
         </div>
         <div className="roadMapText">
@@ -48,6 +51,12 @@ function RoadMap() {
             We build our future through the present. "Continuous improvement and
             innovation" is our motto, stay tuned for more.
           </p>
+        </div>
+      </div>
+      <div className="timeline">
+        <div className="timelineImg">
+          <img src={RoadMapImg} className="desktopImage" alt="" />
+          <img src={RoadMapImgPhone} className="phoneImage" alt="" />
         </div>
       </div>
     </>
