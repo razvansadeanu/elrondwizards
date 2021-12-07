@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import testImg from "./../static/Test.PNG";
-import testImg2 from "./../static/Test2.png";
 import { textFade, imagesFade, buttonFade } from "../animations/banner";
 import { gsap } from "gsap";
 
@@ -33,12 +31,12 @@ function Banner() {
         <div ref={(el) => (title = el)}>
           <p>ARE YOU READY </p>
           <p>
-            FOR OUR <span style={{ color: "#fd4246" }}>MAGIC?</span>
+            FOR OUR <span style={{ color: "#0bd2f5" }}>MAGIC?</span>
           </p>
         </div>
         <div className="introText" ref={(el) => (introText = el)}>
           ELROND WIZARDS is a collection of{" "}
-          <span style={{ color: "#fd4246" }}>3,333</span> Unique NFTs shining on
+          <span style={{ color: "#0bd2f5" }}>3,333</span> Unique NFTs shining on
           the elrond blockcain
         </div>
         <button className="claimButton">
@@ -48,19 +46,34 @@ function Banner() {
       <div className="imageContainer">
         <div className="mosaicImage">
           <div className="mosaicItem5" ref={(el) => (image1 = el)}>
-            <img src={testImg} alt="" />
+            <img
+              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              alt=""
+            />
           </div>
           <div className="mosaicItem4 " ref={(el) => (image2 = el)}>
-            <img src={testImg2} alt="" />
+            <img
+              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              alt=""
+            />
           </div>
           <div className="mosaicItem3" ref={(el) => (image3 = el)}>
-            <img src={testImg} alt="" />
+            <img
+              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              alt=""
+            />
           </div>
           <div className="mosaicItem2" ref={(el) => (image4 = el)}>
-            <img src={testImg2} alt="" />
+            <img
+              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              alt=""
+            />
           </div>
           <div className="mosaicItem" ref={(el) => (image5 = el)}>
-            <img src={testImg} alt="" />
+            <img
+              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              alt=""
+            />
           </div>
           <button
             className="secondClaimButton"

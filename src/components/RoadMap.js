@@ -1,21 +1,55 @@
 import React from "react";
-import testImg from "./../static/Test.PNG";
-import RoadMapImg from "./../static/RoadMap4.PNG";
-import RoadMapImgPhone from "./../static/Phone.png";
 import AliceCarousel from "react-alice-carousel";
 
+// #commet
 function RoadMap() {
   const handleDragStart = (e) => e.preventDefault();
   const items = [
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
-    <img src={testImg} alt="" onDragStart={handleDragStart} />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
   ];
 
   const responsive = {
@@ -55,8 +89,16 @@ function RoadMap() {
       </div>
       <div className="timeline">
         <div className="timelineImg">
-          <img src={RoadMapImg} className="desktopImage" alt="" />
-          <img src={RoadMapImgPhone} className="phoneImage" alt="" />
+          <img
+            src="https://stamaliasharedpdf.blob.core.windows.net/test/Neon.png"
+            className="desktopImage"
+            alt=""
+          />
+          <img
+            src="https://stamaliasharedpdf.blob.core.windows.net/test/Neon.png"
+            className="phoneImage"
+            alt=""
+          />
         </div>
       </div>
     </>

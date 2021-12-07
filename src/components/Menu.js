@@ -11,6 +11,7 @@ import gsap from "gsap";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { socialFade, staggerText } from "../animations/menu";
+import { Link, NavLink } from "react-router-dom";
 
 function Menu() {
   const [{ openedMenu }, dispatch] = useStateValue();
@@ -67,16 +68,16 @@ function Menu() {
         <nav>
           <ul>
             <li ref={(el) => (aboutLink = el)}>
-              <p>About</p>
+              <p to="/#about">About</p>
             </li>
             <li ref={(el) => (teamLink = el)}>
-              <p>Team</p>
+              <p to="/#roadMap">RoadMap</p>
             </li>
             <li ref={(el) => (roadLink = el)}>
-              <p>RoadMap</p>
+              <p to="/#funds">Funds</p>
             </li>
             <li ref={(el) => (faqLink = el)}>
-              <p>FAQ</p>
+              <p to="/#about">Funds</p>
             </li>
           </ul>
         </nav>
@@ -88,13 +89,28 @@ function Menu() {
             <FontAwesomeIcon icon={faGithub} />
           </span>
           <span ref={(el) => (socialTw = el)}>
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon
+              icon={faInstagram}
+              onClick={() =>
+                window.open("https://www.instagram.com/elrondwizards/")
+              }
+            />
           </span>
           <span ref={(el) => (socialGit = el)}>
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              onClick={() => window.open("https://twitter.com/ElrondWizards")}
+            />
           </span>
           <span ref={(el) => (socialDis = el)}>
-            <FontAwesomeIcon icon={faDiscord} />
+            <FontAwesomeIcon
+              icon={faDiscord}
+              onClick={() =>
+                window.open(
+                  "https://discord.com/channels/916259416641261579/916264363382435861"
+                )
+              }
+            />
           </span>
         </div>
       </div>

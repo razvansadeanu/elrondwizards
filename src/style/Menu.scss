@@ -58,6 +58,8 @@
 
           p {
             transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            color: $black;
             &:hover {
               cursor: pointer;
               color: $white;

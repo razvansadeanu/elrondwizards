@@ -116,6 +116,7 @@
     .desktopImage {
       object-fit: contain;
       width: 100%;
+      height: 1150px;
       @include media("<=700px") {
         display: none;
       }

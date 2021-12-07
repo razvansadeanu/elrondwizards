@@ -39,13 +39,28 @@ function Header() {
               <FontAwesomeIcon icon={faGithub} />
             </span>
             <span>
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon
+                icon={faInstagram}
+                onClick={() =>
+                  window.open("https://www.instagram.com/elrondwizards/")
+                }
+              />
             </span>
             <span>
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                onClick={() => window.open("https://twitter.com/ElrondWizards")}
+              />
             </span>
             <span>
-              <FontAwesomeIcon icon={faDiscord} />
+              <FontAwesomeIcon
+                icon={faDiscord}
+                onClick={() =>
+                  window.open(
+                    "https://discord.com/channels/916259416641261579/916264363382435861"
+                  )
+                }
+              />
             </span>
           </div>
           <div className="menuButton" onClick={handleOpenMenu}>

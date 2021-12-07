@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import video from "../static/Video/test2.mp4";
 import ReadMore from "./ReadMore";
 import { titleFade } from "../animations/about";
 
@@ -16,16 +15,22 @@ function About() {
     };
   }, []);
   return (
-    <>
+    <div>
       <div className="aboutContainer">
-        <video src={video} playsInline autoPlay loop muted></video>
+        <video
+          src="https://stamaliasharedpdf.blob.core.windows.net/test/test2.mp4"
+          playsInline
+          autoPlay
+          loop
+          muted
+        ></video>
         <div className="caption">
           <div className="titleText" ref={(el) => (title = el)}>
             <span></span>LEGEND OF...
           </div>
         </div>
       </div>
-      <div className="aboutText">
+      <div className="aboutText" id="about">
         <p>
           Once upon a time in a magical forest, the legend says that in this
           mystical place 3 High Wizards ruled the land and created 3333 magical
@@ -64,7 +69,7 @@ function About() {
           ones, spreading the word around all corners of the world.
         </ReadMore>
       </div>
-    </>
+    </div>
   );
 }
 
