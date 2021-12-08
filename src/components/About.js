@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import ReadMore from "./ReadMore";
 import { titleFade } from "../animations/about";
+import Dragon from "../static/Dragon.mp4";
 
 function About() {
   let title = useRef(null);
@@ -17,13 +18,19 @@ function About() {
   return (
     <section id="about">
       <div className="aboutContainer">
-        <video
-          src="https://stamaliasharedpdf.blob.core.windows.net/test/test2.mp4"
-          playsInline
-          autoPlay
+        <div
+          dangerouslySetInnerHTML={{
+            __html: ` 
+          <video
+          autoplay
           loop
           muted
-        ></video>
+          playsinline
+        >
+        <source src=${Dragon} type="video/mp4" />
+        </video>`,
+          }}
+        />
         <div className="caption">
           <div className="titleText" ref={(el) => (title = el)}>
             <span></span>LEGEND OF...
