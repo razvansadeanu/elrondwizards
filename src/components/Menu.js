@@ -101,10 +101,24 @@ function Menu() {
         </nav>
         <div className="socialsMenu">
           <span ref={(el) => (socialFb = el)}>
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon
+              icon={faFacebook}
+              onClick={() =>
+                window.open(
+                  "https://www.facebook.com/people/Elrond-Wizards/100075376672839/"
+                )
+              }
+            />
           </span>
           <span ref={(el) => (socialIn = el)}>
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon
+              icon={faGithub}
+              onClick={() =>
+                window.open(
+                  "https://github.com/razvansadeanu/elrondwizards/tree/master"
+                )
+              }
+            />
           </span>
           <span ref={(el) => (socialTw = el)}>
             <FontAwesomeIcon
