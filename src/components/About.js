@@ -22,12 +22,12 @@ function About() {
           dangerouslySetInnerHTML={{
             __html: ` 
           <video
-          src="${Dragon}"
           autoPlay
           loop
           muted
           playsInline
         >
+        <source src=${Dragon} type="video/mp4" />
         </video>`,
           }}
         />
