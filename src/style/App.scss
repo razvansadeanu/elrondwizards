@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&family=Spirax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./Breakpoints.scss";
+@import "./Variables.scss";
+@import "./HomePage.scss";
+@import "./Header.scss";
+@import "./Menu.scss";
+@import "./Banner.scss";
+@import "./About.scss";
+@import "./RoadMap.scss";
+@import "./Sponsors.scss";
+@import "./UseOfFunds.scss";
+@import "./Footer.scss";
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  background: $black;
+}

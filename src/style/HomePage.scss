@@ -1,0 +1,13 @@
+.homePage {
+  color: $white;
+  -webkit-tap-highlight-color: transparent;
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
