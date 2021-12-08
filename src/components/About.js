@@ -25,7 +25,7 @@ function About() {
           autoPlay
           loop
           muted
-          playsInline
+          playsinline
         >
         <source src=${Dragon} type="video/mp4" />
         </video>`,
