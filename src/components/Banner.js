@@ -40,7 +40,7 @@ function Banner() {
           the elrond blockcain
         </div>
         <button className="claimButton">
-          <p>BUY NOW</p>
+          <p>TEMPORARY LOCKED</p>
         </button>
       </div>
       <div className="imageContainer">
@@ -79,7 +79,7 @@ function Banner() {
             className="secondClaimButton"
             ref={(el) => (secondButton = el)}
           >
-            <p>TEMPORALY LOCKED</p>
+            <p>TEMPORARY LOCKED</p>
           </button>
         </div>
       </div>
