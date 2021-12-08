@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import ReadMore from "./ReadMore";
 import { titleFade } from "../animations/about";
+import Dragon from "../static/Dragon.mp4";
 
 function About() {
   let title = useRef(null);
@@ -21,7 +22,7 @@ function About() {
           dangerouslySetInnerHTML={{
             __html: ` 
           <video
-          src="https://stamaliasharedpdf.blob.core.windows.net/test/test2.mp4"
+          src="${Dragon}"
           autoPlay
           loop
           muted
