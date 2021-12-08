@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&family=Spirax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 @import "./Breakpoints.scss";
 @import "./Variables.scss";
@@ -17,6 +18,6 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Jura", sans-serif;
   background: $black;
 }

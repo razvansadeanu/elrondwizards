@@ -11,9 +11,11 @@ import gsap from "gsap";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { socialFade, staggerText } from "../animations/menu";
-import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 function Menu() {
+  let navigate = useNavigate();
   const [{ openedMenu }, dispatch] = useStateValue();
   let menuLayer = useRef(null);
   let socialFb = useRef(null);
@@ -33,6 +35,14 @@ function Menu() {
       type: actionTypes.SET_OPENMENU,
       openedMenu: menu,
     });
+  };
+  const handleNavigate = (e) => {
+    const menu = { status: false };
+    dispatch({
+      type: actionTypes.SET_OPENMENU,
+      openedMenu: menu,
+    });
+    console.log(e);
   };
 
   useEffect(() => {
@@ -68,16 +78,24 @@ function Menu() {
         <nav>
           <ul>
             <li ref={(el) => (aboutLink = el)}>
-              <p to="/#about">About</p>
+              <NavLink to="/#about" onClick={handleNavigate}>
+                About
+              </NavLink>
             </li>
             <li ref={(el) => (teamLink = el)}>
-              <p to="/#roadMap">RoadMap</p>
+              <NavLink to="/#roadMap" onClick={handleNavigate}>
+                RoadMap
+              </NavLink>
             </li>
             <li ref={(el) => (roadLink = el)}>
-              <p to="/#funds">Funds</p>
+              <NavLink to="/#funds" onClick={handleNavigate}>
+                Funds
+              </NavLink>
             </li>
             <li ref={(el) => (faqLink = el)}>
-              <p to="/#about">Funds</p>
+              <NavLink to="/" onClick={handleNavigate}>
+                Team
+              </NavLink>
             </li>
           </ul>
         </nav>

@@ -26,7 +26,7 @@ function ReadMore({ children }) {
       )}
       <span
         onClick={toggleReadMore}
-        style={{ color: "#Fd4246", cursor: "pointer" }}
+        style={{ color: "#0bd2f5", cursor: "pointer" }}
         className="read-or-hide"
       >
         {isReadMore ? " Read more ..." : " Show less"}

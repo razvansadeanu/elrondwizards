@@ -15,7 +15,7 @@ function About() {
     };
   }, []);
   return (
-    <div>
+    <section id="about">
       <div className="aboutContainer">
         <video
           src="https://stamaliasharedpdf.blob.core.windows.net/test/test2.mp4"
@@ -30,7 +30,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="aboutText" id="about">
+      <div className="aboutText">
         <p>
           Once upon a time in a magical forest, the legend says that in this
           mystical place 3 High Wizards ruled the land and created 3333 magical
@@ -69,7 +69,7 @@ function About() {
           ones, spreading the word around all corners of the world.
         </ReadMore>
       </div>
-    </div>
+    </section>
   );
 }
 

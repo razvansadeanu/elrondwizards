@@ -74,7 +74,7 @@ function RoadMap() {
           autoPlayStrategy="none"
         />
       </div>
-      <div className="roadMapContainer">
+      <div className="roadMapContainer" id="roadMap">
         <div className="roadMapTitle">
           <div className="roadMapTitleText">
             MILESTONES<span></span>

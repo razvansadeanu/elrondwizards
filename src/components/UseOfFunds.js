@@ -12,7 +12,7 @@ function UseOfFunds() {
 
   const lineWidth = 70;
   return (
-    <div className="useOfFundsContainer">
+    <div className="useOfFundsContainer" id="funds">
       <div className="titleText">
         <span></span>USE OF FUNDS
       </div>
