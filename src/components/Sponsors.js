@@ -7,7 +7,10 @@ function Sponsors() {
         <p> TRUSTED BY </p>
         <span></span>
       </div>
-      <div className="sponsorsLogo">
+      <div
+        className="sponsorsLogo"
+        onClick={() => window.open("https://www.unitedgroup.capital")}
+      >
         <img
           src="https://stamaliasharedpdf.blob.core.windows.net/test/UnitedGroupLogo.png"
           alt=""
