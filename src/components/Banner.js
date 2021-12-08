@@ -79,7 +79,7 @@ function Banner() {
             className="secondClaimButton"
             ref={(el) => (secondButton = el)}
           >
-            <p>BUY NOW</p>
+            <p>TEMPORALY LOCKED</p>
           </button>
         </div>
       </div>
