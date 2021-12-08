@@ -11,7 +11,7 @@ function HomePage() {
     <>
       <div className="homePage">
         <video
-          src="https://stamaliasharedpdf.blob.core.windows.net/test/backgroundVideo.mp4"
+          src="https://stamaliasharedpdf.blob.core.windows.net/test/MainPlexusMOV.mp4"
           playsInline
           autoPlay
           loop
