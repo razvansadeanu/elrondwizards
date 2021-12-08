@@ -17,13 +17,19 @@ function About() {
   return (
     <section id="about">
       <div className="aboutContainer">
-        <video
+        <div
+          dangerouslySetInnerHTML={{
+            __html: ` 
+          <video
           src="https://stamaliasharedpdf.blob.core.windows.net/test/test2.mp4"
-          playsInline
           autoPlay
           loop
           muted
-        ></video>
+          playsInline
+        >
+        </video>`,
+          }}
+        />
         <div className="caption">
           <div className="titleText" ref={(el) => (title = el)}>
             <span></span>LEGEND OF...
