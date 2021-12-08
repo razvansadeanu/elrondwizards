@@ -22,7 +22,7 @@ function About() {
           dangerouslySetInnerHTML={{
             __html: ` 
           <video
-          autoPlay
+          autoplay
           loop
           muted
           playsinline
