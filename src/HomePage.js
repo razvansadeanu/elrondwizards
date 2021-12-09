@@ -19,7 +19,7 @@ function HomePage() {
         <About />
         <RoadMap />
         <UseOfFunds />
-        <Sponsors />
+        {/* <Sponsors /> */}
       </div>
     </>
   );
