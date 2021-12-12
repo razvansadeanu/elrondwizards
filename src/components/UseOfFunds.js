@@ -3,12 +3,11 @@ import { PieChart } from "react-minimal-pie-chart";
 import { Element } from "react-scroll";
 
 function UseOfFunds() {
-  const [selected, setSelected] = useState(3);
+  const [selected, setSelected] = useState();
 
   const handleChange = (e, index) => {
     e.preventDefault();
     setSelected(index === selected ? undefined : index);
-    console.log(selected);
   };
 
   const lineWidth = 70;

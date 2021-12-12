@@ -83,22 +83,30 @@ function Footer() {
           </div>
         </div>
         <div className="menuLinksContainer">
-          <p className="linksTitle">
-            Links<span className="underlineLinks"></span>
-          </p>
-          <div className="menuLinks">
-            <Link to="home" spy={true} smooth={true} duration={600}>
-              Home
-            </Link>
-            <Link to="about" spy={true} smooth={true} duration={600}>
-              About
-            </Link>
-            <Link to="roadMap" spy={true} smooth={true} duration={600}>
-              RoadMap
-            </Link>
-            <Link to="funds" spy={true} smooth={true} duration={600}>
-              Use of Funds
-            </Link>
+          <div>
+            <p className="linksTitle">
+              Links<span className="underlineLinks"></span>
+            </p>
+            <div className="menuLinks">
+              <Link to="home" spy={true} smooth={true} duration={600}>
+                Home
+              </Link>
+              <Link to="about" spy={true} smooth={true} duration={600}>
+                About
+              </Link>
+              <Link to="roadMap" spy={true} smooth={true} duration={600}>
+                RoadMap
+              </Link>
+              <Link to="funds" spy={true} smooth={true} duration={600}>
+                Use of Funds
+              </Link>
+              <p
+                className="footerText onlyPhone"
+                style={{ marginTop: "2.5rem" }}
+              >
+                © 2021 Elrond Wizards
+              </p>
+            </div>
           </div>
         </div>
       </div>
