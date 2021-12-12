@@ -4,9 +4,9 @@
   padding: 1.5rem;
   margin-top: 5rem;
   position: relative;
-
+  margin-top: 1rem;
   @include media("<=700px") {
-    top: -9rem;
+    top: -5.5rem;
   }
   .titleText {
     display: flex;
