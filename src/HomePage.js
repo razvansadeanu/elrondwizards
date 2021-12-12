@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Banner from "./components/Banner";
 import About from "./components/About";
 import RoadMap from "./components/RoadMap";
-import Sponsors from "./components/Sponsors";
 import UseOfFunds from "./components/UseOfFunds";
 import BackgroundVideo from "./static/Background.mp4";
 import Footer from "./components/Footer";

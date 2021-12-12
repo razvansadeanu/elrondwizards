@@ -3,12 +3,9 @@
   display: flex;
   overflow: hidden;
   width: 100%;
-  top: -4rem;
   max-width: 1300px;
   margin: 0 auto;
-  @include media("<=700px") {
-    top: -7rem;
-  }
+  margin-top: 1rem;
   .alice-carousel__dots {
     color: $white;
     &-item:not(.__custom) {
@@ -33,15 +30,16 @@
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  @include media("<=1100px") {
-    top: -2rem;
-  }
-  @include media("<=900px") {
-    top: -3rem;
-  }
-  @include media("<=700px") {
-    top: -6rem;
-  }
+  margin-top: 1rem;
+  // @include media("<=1100px") {
+  //   top: -2rem;
+  // }
+  // @include media("<=900px") {
+  //   top: -3rem;
+  // }
+  // @include media("<=700px") {
+  //   top: -6rem;
+  // }
   .roadMapTitle {
     display: flex;
     justify-content: flex-end;
