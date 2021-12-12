@@ -20,7 +20,7 @@ function HomePage() {
         <RoadMap />
         <UseOfFunds />
         {/* <Sponsors /> */}
-        <Footer />
+        <Footer />   
       </div>
     </>
   );
