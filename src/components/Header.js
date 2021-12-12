@@ -10,6 +10,7 @@ import {
 import Menu from "./Menu";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
+import { Element } from "react-scroll";
 
 function Header() {
   const [{}, dispatch] = useStateValue();
@@ -24,7 +25,7 @@ function Header() {
   };
 
   return (
-    <div className="header">
+    <Element className="header" id="home" name="home">
       <div className="headerContainer">
         <div className="logo">
           <h1>elrond</h1>
@@ -83,7 +84,7 @@ function Header() {
         </div>
       </div>
       <Menu />
-    </div>
+    </Element>
   );
 }
 
