@@ -1,5 +1,6 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
+import { Element } from "react-scroll";
 
 // #commet
 function RoadMap() {
@@ -74,7 +75,7 @@ function RoadMap() {
           autoPlayStrategy="none"
         />
       </div>
-      <div className="roadMapContainer" id="roadMap">
+      <Element className="roadMapContainer" id="roadMap" name="roadMap">
         <div className="roadMapTitle">
           <div className="roadMapTitleText">
             MILESTONES<span></span>
@@ -86,7 +87,7 @@ function RoadMap() {
             innovation" is our motto, stay tuned for more.
           </p>
         </div>
-      </div>
+      </Element>
       <div className="timeline">
         <div className="timelineImg">
           <img

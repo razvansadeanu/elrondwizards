@@ -11,11 +11,9 @@ import gsap from "gsap";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { socialFade, staggerText } from "../animations/menu";
-import { useNavigate } from "react-router";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 function Menu() {
-  let navigate = useNavigate();
   const [{ openedMenu }, dispatch] = useStateValue();
   let menuLayer = useRef(null);
   let socialFb = useRef(null);

@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { PieChart } from "react-minimal-pie-chart";
+import { Element } from "react-scroll";
 
 function UseOfFunds() {
-  const [selected, setSelected] = useState(3);
+  const [selected, setSelected] = useState();
 
   const handleChange = (e, index) => {
     e.preventDefault();
     setSelected(index === selected ? undefined : index);
-    console.log(selected);
   };
 
   const lineWidth = 70;
   return (
-    <div className="useOfFundsContainer" id="funds">
+    <Element className="useOfFundsContainer" id="funds" name="funds">
       <div className="titleText">
         <span></span>USE OF FUNDS
       </div>
@@ -25,16 +25,15 @@ function UseOfFunds() {
               fontSize: "8px",
             }}
             data={[
+              { title: "five", value: 5, color: "#0bd2f5" },
+              { title: "four", value: 10, color: "#07a1e985" },
+              { title: "Three", value: 10, color: "#0cf0f0bb" },
               { title: "Two", value: 25, color: "#03272cca" },
-
               {
                 title: "One",
                 value: 50,
                 color: "#045664",
               },
-              { title: "Three", value: 10, color: "#0cf0f0bb" },
-              { title: "four", value: 10, color: "#07a1e985" },
-              { title: "five", value: 5, color: "#0bd2f5" },
             ]}
             radius={PieChart.defaultProps.radius - 5}
             lineWidth={lineWidth}
@@ -64,25 +63,25 @@ function UseOfFunds() {
         </div>
         <div className="textContainer">
           <div className="textContent">
-            <p className={selected === 1 ? "active" : ""}>
-              50% - Investors and Team
-            </p>
             <p className={selected === 0 ? "active" : ""}>
-              25% - Future projects
+              5% - Investigative Journalism
             </p>
-            <p className={selected === 3 ? "active" : ""}>
+            <p className={selected === 1 ? "active" : ""}>
               10% - Reforestation
             </p>
             <p className={selected === 2 ? "active" : ""}>
               10% - Children Foundation
             </p>
+            <p className={selected === 3 ? "active" : ""}>
+              25% - Future projects
+            </p>
             <p className={selected === 4 ? "active" : ""}>
-              5% - Investigative Journalism
+              50% - Investors and Team
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 }
 
