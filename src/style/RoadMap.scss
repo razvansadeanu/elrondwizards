@@ -108,9 +108,6 @@
   }
   .timelineImg {
     position: relative;
-    @include media("<=700px") {
-      top: -6rem;
-    }
     .desktopImage {
       object-fit: contain;
       width: 100%;
