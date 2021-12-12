@@ -1,6 +1,7 @@
 .homePage {
   color: $white;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
   video {
     position: fixed;
     right: 0;

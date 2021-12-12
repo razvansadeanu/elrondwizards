@@ -37,7 +37,7 @@ function Banner() {
         <div className="introText" ref={(el) => (introText = el)}>
           ELROND WIZARDS is a collection of{" "}
           <span style={{ color: "#0bd2f5" }}>3,333</span> Unique NFTs shining on
-          the elrond blockcain
+          the elrond blockchain
         </div>
         <button className="claimButton">
           <p>TEMPORARILY LOCKED</p>

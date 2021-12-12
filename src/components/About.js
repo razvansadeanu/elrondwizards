@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ReadMore from "./ReadMore";
 import { titleFade } from "../animations/about";
 import Dragon from "../static/Dragon.mp4";
+import { Element } from "react-scroll";
 
 function About() {
   let title = useRef(null);
@@ -16,7 +17,7 @@ function About() {
     };
   }, []);
   return (
-    <section id="about">
+    <Element id="about" name="about">
       <div className="aboutContainer">
         <div
           dangerouslySetInnerHTML={{
@@ -76,7 +77,7 @@ function About() {
           ones, spreading the word around all corners of the world.
         </ReadMore>
       </div>
-    </section>
+    </Element>
   );
 }
 

@@ -6,6 +6,7 @@ import RoadMap from "./components/RoadMap";
 import Sponsors from "./components/Sponsors";
 import UseOfFunds from "./components/UseOfFunds";
 import BackgroundVideo from "./static/Background.mp4";
+import Footer from "./components/Footer";
 
 function HomePage() {
   return (
@@ -19,7 +20,8 @@ function HomePage() {
         <About />
         <RoadMap />
         <UseOfFunds />
-        <Sponsors />
+        {/* <Sponsors /> */}
+        <Footer />
       </div>
     </>
   );
