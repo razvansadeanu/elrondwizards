@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import ModalVideo from "react-modal-video";
-import PlayVideo from "../static/Video.mp4";
 import VideoCover from "../static/Cover.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -33,7 +32,7 @@ function Video() {
       </div>
       <ModalVideo
         channel="custom"
-        url={PlayVideo}
+        url="https://stelrondwizardsweb.blob.core.windows.net/static/Video.mp4"
         allowFullScreen
         ratio="16:9"
         autoplay
