@@ -30,22 +30,13 @@ function Video() {
           ARE YOU READY FOR OUR <span style={{ color: "#0bd2f5" }}>MAGIC?</span>
         </div>
       </div>
-      <ModalVideo
-        channel="custom"
-        url="https://stelrondwizardsweb.blob.core.windows.net/static/Video.mp4"
-        allowFullScreen
-        ratio="16:9"
-        autoplay
-        isOpen={isOpen}
-        onClose={() => setOpen(false)}
-      />
       <div className="videoCover" ref={(el) => (video = el)}>
-        <img src={VideoCover} onClick={() => setOpen(true)} />
-        <div className="playButton">
-          <span onClick={() => setOpen(true)}>
-            <FontAwesomeIcon icon={faPlay} />
-          </span>
-        </div>
+        <video className="intoVideo" poster={VideoCover} controls>
+          <source
+            src="https://stelrondwizardsweb.blob.core.windows.net/static/Video.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </div>
   );
