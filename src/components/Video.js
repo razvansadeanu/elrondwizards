@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 import Dragon from "../static/Dragon.mp4";
-import VideoCover from "../static/logo.jpeg";
+import VideoCover from "../static/Cover.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
