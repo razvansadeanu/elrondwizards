@@ -6,6 +6,7 @@ import RoadMap from "./components/RoadMap";
 import UseOfFunds from "./components/UseOfFunds";
 import BackgroundVideo from "./static/Background5.mp4";
 import Footer from "./components/Footer";
+import Video from "./components/Video";
 
 function HomePage() {
   return (
@@ -15,6 +16,7 @@ function HomePage() {
           <source src={BackgroundVideo} type="video/mp4" />
         </video>
         <Header />
+        <Video />
         <Banner />
         <About />
         <RoadMap />
