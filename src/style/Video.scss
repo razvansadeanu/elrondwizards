@@ -36,6 +36,19 @@
         font-size: 1.7rem;
       }
     }
+    .releaseText {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      color: $green;
+      @include media("<=700px") {
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
+        align-self: flex-start;
+      }
+      .test {
+        color: white;
+      }
+    }
 
     .intro {
       margin-top: 2rem;
@@ -47,35 +60,6 @@
       text-align: justify;
     }
   }
-  .modal-video {
-    .modal-video-body {
-      .modal-video-inner {
-        width: 110vh !important;
-        @include media("<=1250px") {
-          width: 95vh !important;
-        }
-        @include media("<=1000px") {
-          width: 85vh !important;
-        }
-        @include media("<=900px") {
-          width: 100% !important;
-        }
-        padding: 0;
-        .modal-video-movie-wrap {
-          width: 110vh !important;
-          @include media("<=1250px") {
-            width: 95vh !important;
-          }
-          @include media("<=1000px") {
-            width: 85vh !important;
-          }
-          @include media("<=900px") {
-            width: 100% !important;
-          }
-        }
-      }
-    }
-  }
   .videoCover {
     margin-top: 3rem;
     box-shadow: 0px 7px 20px $green;
@@ -83,7 +67,7 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     opacity: 0;
-     .intoVideo {
+    .intoVideo {
       width: 100%;
       border-radius: 20px;
       height: 100%;
