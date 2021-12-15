@@ -18,7 +18,7 @@ function Footer() {
             Elrond Wizards<span className="underline"></span>
           </p>
           <p className="footerText">
-            A collection of 3,333 unique NFTs algorithmically generated living
+            A collection of 3,333 unique NFTs algorithmically generated, living
             on Elrond blockchain
           </p>
           <p className="socialLinks">

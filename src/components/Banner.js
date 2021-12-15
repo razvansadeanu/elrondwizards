@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { textFade, imagesFade, buttonFade } from "../animations/banner";
+import { imagesFade, buttonFade } from "../animations/banner";
 import { gsap } from "gsap";
 
 function Banner() {
@@ -17,7 +17,6 @@ function Banner() {
     if (mounted) {
       //prevent flashing
       gsap.to(".banner", 0, { css: { visibility: "visible" } });
-      textFade(title, introText);
       imagesFade(image4, image5, image1, image2, image3);
       buttonFade(secondButton);
     }
@@ -28,12 +27,6 @@ function Banner() {
   return (
     <div className="banner">
       <div className="textContainer">
-        <div ref={(el) => (title = el)}>
-          <p>ARE YOU READY </p>
-          <p>
-            FOR OUR <span style={{ color: "#0bd2f5" }}>MAGIC?</span>
-          </p>
-        </div>
         <div className="introText" ref={(el) => (introText = el)}>
           ELROND WIZARDS is a collection of{" "}
           <span style={{ color: "#0bd2f5" }}>3,333</span> Unique NFTs shining on

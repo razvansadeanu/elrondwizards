@@ -2,13 +2,14 @@
   color: $white;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
-  video {
+  .backVideo {
     position: fixed;
-    right: 0;
     bottom: 0;
+    right: 0;
     min-width: 100%;
     min-height: 100%;
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
+    opacity: 0.3;
   }
 }
