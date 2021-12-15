@@ -4,7 +4,7 @@ import Banner from "./components/Banner";
 import About from "./components/About";
 import RoadMap from "./components/RoadMap";
 import UseOfFunds from "./components/UseOfFunds";
-import BackgroundVideo from "./static/Background5.mp4";
+import BackgroundVideo from "./static/Background.mp4";
 import Footer from "./components/Footer";
 import Video from "./components/Video";
 
