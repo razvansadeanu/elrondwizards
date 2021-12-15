@@ -12,7 +12,14 @@ function HomePage() {
   return (
     <>
       <div className="homePage">
-        <video src={BackgroundVideo} playsInline autoPlay loop muted>
+       <video
+          className="backVideo"
+          src={BackgroundVideo}
+          playsInline
+          autoPlay
+          loop
+          muted
+        >
           <source src={BackgroundVideo} type="video/mp4" />
         </video>
         <Header />
