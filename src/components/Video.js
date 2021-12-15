@@ -1,20 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import ModalVideo from "react-modal-video";
+import React, { useEffect, useRef } from "react";
 import VideoCover from "../static/Cover.PNG";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { textScale, videoFade } from "../animations/video";
 
 function Video() {
-  const [isOpen, setOpen] = useState(false);
   let title = useRef(null);
   let video = useRef(null);
 
   useEffect(() => {
     let mounted = true;
     if (mounted) {
-      //prevent flashing
-      //   gsap.to(".videoCover", 0, { css: { visibility: "visible" } });
       textScale(title);
       videoFade(video);
     }

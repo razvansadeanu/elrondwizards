@@ -11,7 +11,7 @@ import Menu from "./Menu";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { Element } from "react-scroll";
-import logo from "../static/logo.jpeg";
+import TypewriterComponent from "typewriter-effect";
 
 function Header() {
   const [{}, dispatch] = useStateValue();
@@ -33,6 +33,27 @@ function Header() {
           <div>
             <h1>elrond</h1>
             <h1 className="textSpace">wizards</h1>
+          </div>
+          <div className="releaseText">
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .pauseFor(2000)
+                  .typeString("Release date late 2021")
+                  .callFunction(() => {
+                    console.log("String typed out!");
+                  })
+                  .pauseFor(300)
+                  .deleteChars(9)
+                  .typeString("<strong>early 2022</strong>")
+                  .pauseFor(2000)
+                  .callFunction(() => {
+                    console.log("All strings were deleted");
+                  })
+                  .start();
+              }}
+              options={{ autoStart: true, loop: true }}
+            />
           </div>
         </div>
         <div className="socialsMenu">
