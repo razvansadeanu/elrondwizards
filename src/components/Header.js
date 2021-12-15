@@ -11,6 +11,7 @@ import Menu from "./Menu";
 import { useStateValue } from "./../context/StateProvider";
 import { actionTypes } from "./../context/reducer";
 import { Element } from "react-scroll";
+import logo from "../static/logo.jpeg";
 
 function Header() {
   const [{}, dispatch] = useStateValue();
@@ -28,8 +29,11 @@ function Header() {
     <Element className="header" id="home" name="home">
       <div className="headerContainer">
         <div className="logo">
-          <h1>elrond</h1>
-          <h1 className="textSpace">wizards</h1>
+          {/* <img src={logo} alt="" /> */}
+          <div>
+            <h1>elrond</h1>
+            <h1 className="textSpace">wizards</h1>
+          </div>
         </div>
         <div className="socialsMenu">
           <div className="socials">
