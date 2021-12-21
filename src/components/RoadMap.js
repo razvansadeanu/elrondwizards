@@ -7,47 +7,47 @@ function RoadMap() {
   const handleDragStart = (e) => e.preventDefault();
   const items = [
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
       alt=""
       onDragStart={handleDragStart}
     />,
@@ -91,12 +91,12 @@ function RoadMap() {
       <div className="timeline">
         <div className="timelineImg">
           <img
-            src="https://stamaliasharedpdf.blob.core.windows.net/test/Neon.png"
+            src="https://stelrondwizardsweb.blob.core.windows.net/static/RoadMap.png"
             className="desktopImage"
             alt=""
           />
           <img
-            src="https://stamaliasharedpdf.blob.core.windows.net/test/Neon.png"
+            src="https://stelrondwizardsweb.blob.core.windows.net/static/RoadMap.png"
             className="phoneImage"
             alt=""
           />

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import VideoCover from "../static/Cover.PNG";
 import { textScale, videoFade } from "../animations/video";
 import TypewriterComponent from "typewriter-effect";
 
@@ -53,7 +52,11 @@ function Video() {
         </div>
       </div>
       <div className="videoCover" ref={(el) => (video = el)}>
-        <video className="intoVideo" poster={VideoCover} controls>
+        <video
+          className="intoVideo"
+          poster="https://stelrondwizardsweb.blob.core.windows.net/static/VideoCover.png"
+          controls
+        >
           <source
             src="https://stelrondwizardsweb.blob.core.windows.net/static/Video.mp4"
             type="video/mp4"
