@@ -4,7 +4,6 @@ import Banner from "./components/Banner";
 import About from "./components/About";
 import RoadMap from "./components/RoadMap";
 import UseOfFunds from "./components/UseOfFunds";
-import BackgroundVideo from "./static/Background.mp4";
 import Footer from "./components/Footer";
 import Video from "./components/Video";
 
@@ -12,15 +11,18 @@ function HomePage() {
   return (
     <>
       <div className="homePage">
-       <video
+        <video
           className="backVideo"
-          src={BackgroundVideo}
+          src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
           playsInline
           autoPlay
           loop
           muted
         >
-          <source src={BackgroundVideo} type="video/mp4" />
+          <source
+            src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
+            type="video/mp4"
+          />
         </video>
         <Header />
         <Video />

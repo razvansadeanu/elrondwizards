@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import ReadMore from "./ReadMore";
 import { titleFade } from "../animations/about";
-import Dragon from "../static/Dragon.mp4";
 import { Element } from "react-scroll";
 
 function About() {
   let title = useRef(null);
+  const Dragon =
+    "https://stelrondwizardsweb.blob.core.windows.net/static/Dragon.mp4";
 
   useEffect(() => {
     let mounted = true;

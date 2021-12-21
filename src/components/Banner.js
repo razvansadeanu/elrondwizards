@@ -40,31 +40,31 @@ function Banner() {
         <div className="mosaicImage">
           <div className="mosaicItem5" ref={(el) => (image1 = el)}>
             <img
-              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
               alt=""
             />
           </div>
           <div className="mosaicItem4 " ref={(el) => (image2 = el)}>
             <img
-              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
               alt=""
             />
           </div>
           <div className="mosaicItem3" ref={(el) => (image3 = el)}>
             <img
-              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
               alt=""
             />
           </div>
           <div className="mosaicItem2" ref={(el) => (image4 = el)}>
             <img
-              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
               alt=""
             />
           </div>
           <div className="mosaicItem" ref={(el) => (image5 = el)}>
             <img
-              src="https://stamaliasharedpdf.blob.core.windows.net/test/CommingSoon.PNG"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
               alt=""
             />
           </div>
