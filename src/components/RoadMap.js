@@ -96,7 +96,7 @@ function RoadMap() {
             alt=""
           />
           <img
-            src="https://stelrondwizardsweb.blob.core.windows.net/static/RoadMap.png"
+            src="https://stelrondwizardsweb.blob.core.windows.net/static/Neon.png"
             className="phoneImage"
             alt=""
           />
