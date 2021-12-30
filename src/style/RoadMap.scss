@@ -19,8 +19,8 @@
     // -webkit-filter: grayscale(100%);
     // filter: grayscale(100%);
     width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: 350px;
+    object-fit: contain;
   }
 }
 .roadMapContainer {
