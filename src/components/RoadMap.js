@@ -7,47 +7,47 @@ function RoadMap() {
   const handleDragStart = (e) => e.preventDefault();
   const items = [
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/1.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/2.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/4.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/1.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/ComingSoon.png"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/4.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
@@ -57,8 +57,8 @@ function RoadMap() {
     0: { items: 1 },
     320: { items: 2 },
     530: { items: 3 },
-    800: { items: 4 },
-    1024: { items: 5 },
+    800: { items: 5 },
+    1024: { items: 6 },
   };
   return (
     <>
