@@ -131,7 +131,7 @@
         max-height: 400px;
         object-fit: cover;
         border-radius: 20px;
-        transition: all 0.4s ease-in-out;
+        transition: all 0.1s ease-in-out;
         border: 2px solid $green;
         @include media("<=900px") {
           max-height: 280px;
@@ -144,7 +144,7 @@
         }
         &:hover {
           transform: scale(1.1);
-          filter: grayscale(0%);
+          //   filter: grayscale(0%);
         }
       }
       .mosaicItem {

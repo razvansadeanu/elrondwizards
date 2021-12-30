@@ -17,11 +17,6 @@ function RoadMap() {
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
-      alt=""
-      onDragStart={handleDragStart}
-    />,
-    <img
       src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
       alt=""
       onDragStart={handleDragStart}
@@ -37,17 +32,27 @@ function RoadMap() {
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/1.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/6.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/7.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/4.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/8.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/9.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/10.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
