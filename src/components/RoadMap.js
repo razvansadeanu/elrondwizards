@@ -62,6 +62,7 @@ function RoadMap() {
     0: { items: 1 },
     320: { items: 2 },
     530: { items: 3 },
+    650: { items: 4 },
     800: { items: 5 },
     1024: { items: 6 },
   };
