@@ -1,6 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import { Element } from "react-scroll";
+import TypewriterComponent from "typewriter-effect";
 
 // #commet
 function RoadMap() {
@@ -80,7 +81,26 @@ function RoadMap() {
           infinite
           autoPlayStrategy="none"
         />
+        <div className="infoMessage">
+          <TypewriterComponent
+            onInit={(typewriter) => {
+              typewriter
+                .pauseFor(2000)
+                .typeString("Work in progress")
+                .callFunction(() => {
+                  console.log("String typed out!");
+                })
+                .pauseFor(3000)
+                .callFunction(() => {
+                  console.log("All strings were deleted");
+                })
+                .start();
+            }}
+            options={{ autoStart: true, loop: true }}
+          />
+        </div>
       </div>
+
       <Element className="roadMapContainer" id="roadMap" name="roadMap">
         <div className="roadMapTitle">
           <div className="roadMapTitleText">
