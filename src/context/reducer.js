@@ -9,7 +9,6 @@ export const actionTypes = {
 };
 
 function reducer(state, action) {
-  console.log(action);
   switch (action.type) {
     case actionTypes.SET_OPENMENU:
       return {

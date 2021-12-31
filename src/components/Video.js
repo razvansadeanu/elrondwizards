@@ -35,16 +35,10 @@ function Video() {
                 .typeString(
                   'Release date <span style="color: white;">late 2021</span>'
                 )
-                .callFunction(() => {
-                  console.log("String typed out!");
-                })
                 .pauseFor(300)
                 .deleteChars(9)
                 .typeString('<strong style="color: white;">early 2022</strong>')
                 .pauseFor(2000)
-                .callFunction(() => {
-                  console.log("All strings were deleted");
-                })
                 .start();
             }}
             options={{ autoStart: true, loop: true }}

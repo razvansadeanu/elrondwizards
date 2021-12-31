@@ -40,7 +40,6 @@ function Menu() {
       type: actionTypes.SET_OPENMENU,
       openedMenu: menu,
     });
-    console.log(e);
   };
 
   useEffect(() => {

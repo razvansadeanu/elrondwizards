@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { imagesFade, buttonFade } from "../animations/banner";
 import { gsap } from "gsap";
 
 function Banner() {
-  let title = useRef(null);
   let introText = useRef(null);
   let image1 = useRef(null);
   let image2 = useRef(null);
@@ -11,6 +10,14 @@ function Banner() {
   let image4 = useRef(null);
   let image5 = useRef(null);
   let secondButton = useRef(null);
+  const [activeImage, setActiveImage] = useState({
+    img1: false,
+    img2: false,
+    img3: false,
+    img4: false,
+    img5: false,
+    img6: false,
+  });
 
   useEffect(() => {
     let mounted = true;
@@ -24,6 +31,21 @@ function Banner() {
       mounted = false;
     };
   }, []);
+
+  const handleScaleOut = (e) => {
+    const { name } = e.target;
+    console.log(e.target.name);
+    setActiveImage({ ...activeImage, [name]: true });
+    // setActiveImage();
+  };
+
+  const handleScaleIn = (e) => {
+    const { name } = e.target;
+    console.log(e.target.name);
+    setActiveImage({ ...activeImage, [name]: false });
+    // setActiveImage();
+  };
+
   return (
     <div className="banner">
       <div className="textContainer">
@@ -62,7 +84,7 @@ function Banner() {
               alt=""
             />
           </div>
-          <div className="mosaicItem" ref={(el) => (image5 = el)}>
+          <div className="mosaicItem" ref={(el) => (image5 = el)} style={{}}>
             <img
               src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
               alt=""
