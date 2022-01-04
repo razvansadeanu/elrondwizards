@@ -76,9 +76,9 @@ function Footer() {
             </p>
             <p
               className="footerText"
-              onClick={() => window.open("mailto:contact@elrondwizards.com")}
+              onClick={() => window.open("mailto:team@elrondwizards.com")}
             >
-              contact@elrondwizards.com
+              team@elrondwizards.com
             </p>
           </div>
         </div>
