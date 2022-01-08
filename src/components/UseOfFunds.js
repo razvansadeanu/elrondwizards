@@ -35,7 +35,7 @@ function UseOfFunds() {
                 color: "#045664",
               },
             ]}
-            radius={PieChart.defaultProps.radius - 5}
+            radius={PieChart.defaultProps.radius - 7}
             lineWidth={lineWidth}
             segmentsStyle={{
               transition: "stroke .3s",
