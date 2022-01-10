@@ -62,31 +62,31 @@ function Banner() {
         <div className="mosaicImage">
           <div className="mosaicItem5" ref={(el) => (image1 = el)}>
             <img
-              src="https://stelrondwizardsweb.blob.core.windows.net/static/1.jpeg"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
               alt=""
             />
           </div>
           <div className="mosaicItem4 " ref={(el) => (image2 = el)}>
             <img
-              src="https://stelrondwizardsweb.blob.core.windows.net/static/2.jpeg"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/17.jpeg"
               alt=""
             />
           </div>
           <div className="mosaicItem3" ref={(el) => (image3 = el)}>
             <img
-              src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/16.jpeg"
               alt=""
             />
           </div>
           <div className="mosaicItem2" ref={(el) => (image4 = el)}>
             <img
-              src="https://stelrondwizardsweb.blob.core.windows.net/static/4.jpeg"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/13.jpeg"
               alt=""
             />
           </div>
           <div className="mosaicItem" ref={(el) => (image5 = el)} style={{}}>
             <img
-              src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
+              src="https://stelrondwizardsweb.blob.core.windows.net/static/11.jpeg"
               alt=""
             />
           </div>
