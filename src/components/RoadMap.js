@@ -17,22 +17,12 @@ function RoadMap() {
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/16.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/4.jpeg"
-      alt=""
-      onDragStart={handleDragStart}
-    />,
-    <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/5.jpeg"
-      alt=""
-      onDragStart={handleDragStart}
-    />,
-    <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/6.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/19.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
@@ -42,17 +32,42 @@ function RoadMap() {
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/8.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/12.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/9.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/21.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
     <img
-      src="https://stelrondwizardsweb.blob.core.windows.net/static/10.jpeg"
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/17.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/14.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/11.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/2.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/22.jpeg"
+      alt=""
+      onDragStart={handleDragStart}
+    />,
+    <img
+      src="https://stelrondwizardsweb.blob.core.windows.net/static/3.jpeg"
       alt=""
       onDragStart={handleDragStart}
     />,
