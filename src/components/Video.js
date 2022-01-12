@@ -1,21 +1,53 @@
 import React, { useEffect, useRef } from "react";
 import { textScale, videoFade } from "../animations/video";
 import TypewriterComponent from "typewriter-effect";
+import Countdown from "react-countdown";
 
 function Video() {
   let title = useRef(null);
   let video = useRef(null);
+  const text = <Countdown className="countDown" date={"2022-01-14T20:00:00"} />;
 
   useEffect(() => {
     let mounted = true;
     if (mounted) {
       textScale(title);
       videoFade(video);
+      console.log(text);
     }
     return function cleanup() {
       mounted = false;
     };
   }, []);
+
+  const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <>Test</>;
+    } else {
+      // Render a countdown
+      return (
+        <div className="countDownContainer">
+          <div className="countDownText">
+            <p style={{ color: "white" }}>Days </p>
+            <p style={{ marginTop: "10px" }}>{days}</p>
+          </div>
+          <div className="countDownText">
+            <p style={{ color: "white" }}>Hours</p>
+            <p style={{ marginTop: "10px" }}>{hours}</p>
+          </div>
+          <div className="countDownText">
+            <p style={{ color: "white" }}>Minutes</p>
+            <p style={{ marginTop: "10px" }}>{minutes}</p>
+          </div>
+          <div className="countDownText">
+            <p style={{ color: "white" }}>Seconds</p>
+            <p style={{ marginTop: "10px" }}>{seconds}</p>
+          </div>
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="video">
@@ -24,20 +56,25 @@ function Video() {
           ARE YOU READY FOR OUR <span style={{ color: "#0bd2f5" }}>MAGIC?</span>
         </div>
         <div className="releaseText">
-          <TypewriterComponent
-            onInit={(typewriter) => {
-              typewriter
-                .pauseFor(2000)
-                .typeString(
-                  'Release date <span style="color: white;">late 2021</span>'
-                )
-                .pauseFor(300)
-                .deleteChars(9)
-                .typeString('<strong style="color: white;">early 2022</strong>')
-                .pauseFor(2000)
-                .start();
-            }}
-            options={{ autoStart: true, loop: true }}
+          <p className="releaseSpan">
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter
+                  .pauseFor(2000)
+                  .typeString("Lunching soon")
+                  .pauseFor(300)
+                  .deleteChars(14)
+                  .typeString("Stay tuned")
+                  .pauseFor(2000)
+                  .start();
+              }}
+              options={{ autoStart: true, loop: true }}
+            />
+          </p>
+          <Countdown
+            className="countDown"
+            renderer={renderer}
+            date={"2022-01-14T20:00:00"}
           />
         </div>
       </div>
