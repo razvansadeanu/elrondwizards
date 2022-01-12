@@ -40,32 +40,32 @@
       margin-top: 2rem;
       font-size: 2rem;
       color: $green;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       @include media("<=700px") {
         margin-top: 1.5rem;
         font-size: 1.5rem;
-        text-align: start;
+        align-items: center;
       }
-
       .releaseSpan {
         margin-bottom: 10px;
       }
       .countDownContainer {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         display: flex;
         letter-spacing: 0.2rem;
         @include media("<=500px") {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           letter-spacing: 0.1rem;
         }
-
         .countDownText {
           display: flex;
           font-size: 1.5rem;
           margin-right: 15px;
           flex-direction: column;
           align-items: center;
-          justify-content: center;
           @include media("<=500px") {
             font-size: 1.2rem;
             letter-spacing: 0.1rem;

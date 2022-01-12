@@ -6,14 +6,14 @@ import Countdown from "react-countdown";
 function Video() {
   let title = useRef(null);
   let video = useRef(null);
-  const text = <Countdown className="countDown" date={"2022-01-14T20:00:00"} />;
+  let text = useRef(null);
 
   useEffect(() => {
     let mounted = true;
     if (mounted) {
       textScale(title);
       videoFade(video);
-      console.log(text);
+      textScale(text);
     }
     return function cleanup() {
       mounted = false;
@@ -23,11 +23,11 @@ function Video() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
-      return <>Test</>;
+      return <>Complete</>;
     } else {
       // Render a countdown
       return (
-        <div className="countDownContainer">
+        <div className="countDownContainer" ref={(el) => (text = el)}>
           <div className="countDownText">
             <p style={{ color: "white" }}>Days </p>
             <p style={{ marginTop: "10px" }}>{days}</p>
@@ -61,7 +61,7 @@ function Video() {
               onInit={(typewriter) => {
                 typewriter
                   .pauseFor(2000)
-                  .typeString("Lunching soon")
+                  .typeString("Launching soon")
                   .pauseFor(300)
                   .deleteChars(14)
                   .typeString("Stay tuned")
