@@ -17,10 +17,6 @@ function Video() {
     };
   }, []);
 
-  const text = () => {
-    return <strong style={{ color: "white" }}>early 2022</strong>;
-  };
-
   return (
     <div className="video">
       <div className="introText">
