@@ -57,7 +57,7 @@ function Video() {
         </div>
         <div className="releaseText">
           <p className="releaseSpan">
-            <TypewriterComponent
+            {/* <TypewriterComponent
               onInit={(typewriter) => {
                 typewriter
                   .pauseFor(2000)
@@ -69,7 +69,7 @@ function Video() {
                   .start();
               }}
               options={{ autoStart: true, loop: true }}
-            />
+            /> */}
           </p>
           <Countdown
             className="countDown"
