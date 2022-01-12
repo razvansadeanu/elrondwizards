@@ -38,15 +38,43 @@
     }
     .releaseText {
       margin-top: 2rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: $green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       @include media("<=700px") {
         margin-top: 1.5rem;
-        font-size: 1.3rem;
-        align-self: flex-start;
+        font-size: 1.5rem;
+        align-items: center;
       }
-      .test {
-        color: white;
+      .releaseSpan {
+        margin-bottom: 10px;
+      }
+      .countDownContainer {
+        font-size: 1.5rem;
+        display: flex;
+        letter-spacing: 0.2rem;
+        @include media("<=500px") {
+          font-size: 1.3rem;
+          letter-spacing: 0.1rem;
+        }
+        .countDownText {
+          display: flex;
+          font-size: 1.5rem;
+          margin-right: 15px;
+          flex-direction: column;
+          align-items: center;
+          @include media("<=500px") {
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+          }
+          @include media("<=400px") {
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+          }
+        }
       }
     }
 

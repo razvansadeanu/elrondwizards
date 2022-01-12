@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { imagesFade, buttonFade } from "../animations/banner";
 import { gsap } from "gsap";
 
@@ -10,14 +10,6 @@ function Banner() {
   let image4 = useRef(null);
   let image5 = useRef(null);
   let secondButton = useRef(null);
-  const [activeImage, setActiveImage] = useState({
-    img1: false,
-    img2: false,
-    img3: false,
-    img4: false,
-    img5: false,
-    img6: false,
-  });
 
   useEffect(() => {
     let mounted = true;
@@ -31,20 +23,6 @@ function Banner() {
       mounted = false;
     };
   }, []);
-
-  const handleScaleOut = (e) => {
-    const { name } = e.target;
-    console.log(e.target.name);
-    setActiveImage({ ...activeImage, [name]: true });
-    // setActiveImage();
-  };
-
-  const handleScaleIn = (e) => {
-    const { name } = e.target;
-    console.log(e.target.name);
-    setActiveImage({ ...activeImage, [name]: false });
-    // setActiveImage();
-  };
 
   return (
     <div className="banner">
