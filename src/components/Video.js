@@ -23,7 +23,7 @@ function Video() {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
-      return <>Complete</>;
+      return <div className="countDownText">Launching now!</div>;
     } else {
       // Render a countdown
       return (
