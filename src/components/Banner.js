@@ -32,8 +32,8 @@ function Banner() {
           <span style={{ color: "#0bd2f5" }}>3,333</span> Unique NFTs shining on
           the elrond blockchain
         </div>
-        <button className="claimButton">
-          <p>TEMPORARILY LOCKED</p>
+        <button className="claimButton"  onClick={() => window.open("https://isengard.market/collection/EWIZZ-1e8ddb")}>
+          <p>BUY NOW</p>
         </button>
       </div>
       <div className="imageContainer">
@@ -71,8 +71,9 @@ function Banner() {
           <button
             className="secondClaimButton"
             ref={(el) => (secondButton = el)}
+            onClick={() => window.open("https://isengard.market/collection/EWIZZ-1e8ddb")}
           >
-            <p>TEMPORARILY LOCKED</p>
+            <p>BUY NOW</p>
           </button>
         </div>
       </div>
