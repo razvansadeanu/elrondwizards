@@ -23,7 +23,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </Dapp.Authenticate>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

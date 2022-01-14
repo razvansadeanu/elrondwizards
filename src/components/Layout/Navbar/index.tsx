@@ -17,7 +17,10 @@ const Navbar = () => {
   };
 
   return (
-    <BsNavbar className="bg-white border-bottom px-4 py-3">
+    <BsNavbar
+      className="border-bottom px-4 py-3 "
+      style={{ zIndex: 1, opacity: "0.8" }}
+    >
       <div className="container-fluid">
         <Link
           className="d-flex align-items-center navbar-brand mr-0"

@@ -4,10 +4,25 @@ $body: #000;
 $headings-font-weight: 300 !important;
 $primary: #1b46c2;
 $light: #fafafa;
+$green: #0bd2f5;
 
 /* Do not move the imports from here. 
 Override Bootstrap variables only above.
 -------------------------------------------------- */
+.home-page {
+  color: $light;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  .back-video {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    opacity: 1;
+  }
+}
 
 // Bootstrap
 @import "./../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -91,7 +106,6 @@ html {
   }
 
   &.table {
-
     .transaction-hash .trim {
       @include media-breakpoint-down(xl) {
         max-width: none;
@@ -107,7 +121,8 @@ html {
       }
     }
 
-    td, tr {
+    td,
+    tr {
       padding: 0.65rem;
     }
 
@@ -115,7 +130,7 @@ html {
       white-space: nowrap;
       vertical-align: middle;
     }
- 
+
     tr:last-of-type {
       td {
         border-bottom: 1px solid #dee2e6;

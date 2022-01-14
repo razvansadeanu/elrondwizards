@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { dAppName } from "config";
 import { routeNames } from "routes";
+import Banner from "components/Banner";
 
 const Home = () => {
   return (
@@ -28,10 +29,10 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          <Banner />
         </div>
       </div>
     </div>
   );
 };
-
 export default Home;
