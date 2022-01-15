@@ -17,16 +17,13 @@ const Navbar = () => {
   };
 
   return (
-    <BsNavbar
-      className="border-bottom px-4 py-3 "
-      style={{ zIndex: 1, opacity: "0.8" }}
-    >
+    <BsNavbar className="border-bottom px-4 py-3 " style={{ zIndex: 1 }}>
       <div className="container-fluid">
         <Link
           className="d-flex align-items-center navbar-brand mr-0"
           to={loggedIn ? "/dashboard" : "/"}
         >
-          <ElrondLogo className="elrond-logo" />
+          {/* <ElrondLogo className="elrond-logo" /> */}
           <span className="dapp-name text-muted">{dAppName}</span>
         </Link>
 

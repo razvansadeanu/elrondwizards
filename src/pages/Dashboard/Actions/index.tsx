@@ -117,7 +117,7 @@ const Actions = () => {
         <>
           {hasPing ? (
             <div className="action-btn">
-              <button className="btn" onClick={send(mintTransaction)}>
+              <button onClick={send(mintTransaction)}>
                 <FontAwesomeIcon icon={faArrowUp} className="text-primary" />
               </button>
               <a href="/" className="text-white text-decoration-none">
