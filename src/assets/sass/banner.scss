@@ -74,7 +74,7 @@
     .claimButton {
       margin-top: 3rem;
       width: 100%;
-      padding: 15px;
+      padding: 15px 0px 0px 0px;
       cursor: pointer;
       outline: none;
       border-radius: 10px;
@@ -84,6 +84,10 @@
       background-color: transparent;
       font-weight: 500;
       transition: all 0.3s ease-in-out;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include media("<=1100px") {
         width: 90%;
       }

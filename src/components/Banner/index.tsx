@@ -1,5 +1,6 @@
 import React from "react";
-
+import { routeNames } from "routes";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="banner">
@@ -9,9 +10,16 @@ const Banner = () => {
           <span style={{ color: "#0bd2f5" }}>3,333</span> Unique NFTs shining on
           the elrond blockchain
         </div>
-        <button className="claimButton">
+        {/* <button className="claimButton">
           <p>TEMPORARILY LOCKED</p>
-        </button>
+        </button> */}
+        <Link
+          to={routeNames.unlock}
+          className="claimButton"
+          data-testid="loginBtn"
+        >
+          <p>BUY NOW</p>
+        </Link>
       </div>
       <div className="imageContainer">
         <div className="mosaicImage">
@@ -45,9 +53,13 @@ const Banner = () => {
               alt=""
             />
           </div>
-          <button className="secondClaimButton">
-            <p>TEMPORARILY LOCKED</p>
-          </button>
+          <Link
+            to={routeNames.unlock}
+            className="claimButton"
+            data-testid="loginBtn"
+          >
+            <p>BUY NOW</p>
+          </Link>
         </div>
       </div>
     </div>
