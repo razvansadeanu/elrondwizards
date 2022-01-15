@@ -3,35 +3,21 @@ import { Link } from "react-router-dom";
 import { dAppName } from "config";
 import { routeNames } from "routes";
 import Banner from "components/Banner";
+import Video from "components/Video";
+import About from "components/About";
+import RoadMap from "components/RoadMap";
+import UseOfFounds from "components/UseOfFounds";
+import Footer from "components/Footer";
 
 const Home = () => {
   return (
-    <div className="d-flex flex-fill align-items-center container">
-      <div className="row w-100">
-        <div className="col-12 col-md-8 col-lg-5 mx-auto">
-          <div className="card shadow-sm rounded p-4 border-0">
-            <div className="card-body text-center">
-              <h2 className="mb-3" data-testid="title">
-                {dAppName}
-              </h2>
-
-              <p className="mb-3">
-                This is an Elrond dapp sample.
-                <br /> Login using your Elrond wallet.
-              </p>
-
-              <Link
-                to={routeNames.unlock}
-                className="btn btn-primary mt-3"
-                data-testid="loginBtn"
-              >
-                Login
-              </Link>
-            </div>
-          </div>
-          <Banner />
-        </div>
-      </div>
+    <div className="home-page">
+      <Video />
+      <Banner />
+      <About />
+      <RoadMap />
+      <UseOfFounds />
+      <Footer />
     </div>
   );
 };

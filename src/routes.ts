@@ -46,7 +46,7 @@ const wrappedRoutes = () =>
       authenticatedRoute: Boolean(route.authenticatedRoute),
       component: withPageTitle(
         title,
-        route.component
+        route.component,
       ) as any as React.ComponentClass<any, any>,
     };
   });

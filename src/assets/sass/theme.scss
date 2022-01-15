@@ -9,26 +9,22 @@ $green: #0bd2f5;
 /* Do not move the imports from here. 
 Override Bootstrap variables only above.
 -------------------------------------------------- */
-.home-page {
-  color: $light;
-  -webkit-tap-highlight-color: transparent;
-  scroll-behavior: smooth;
-  .back-video {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: 0;
-    opacity: 1;
-  }
-}
 
 // Bootstrap
 @import "./../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 // Dapp-utils
 @import "./../../../node_modules/@elrondnetwork/dapp-utils/dist/dapp-utils.scss";
+
+// Locals
+@import "./breakpoints.scss";
+@import "./video.scss";
+@import "./banner.scss";
+@import "./about.scss";
+@import "./roadMap.scss";
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./useOfFounds.scss";
+@import "./footer.scss";
 
 /* Base
 -------------------------------------------------- */
@@ -60,6 +56,17 @@ html {
     width: 80px;
     height: 80px;
   }
+}
+/* Video
+-------------------------------------------------- */
+.background-video {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  opacity: 1;
 }
 
 /* Navbar
@@ -209,31 +216,10 @@ html {
   }
 }
 
-/* Footer
+/* Home Page
 -------------------------------------------------- */
-footer {
-  div {
-    margin-top: 0.5rem;
-    font-size: 0.75rem;
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.155rem;
-
-    a {
-      color: $black;
-
-      &:hover {
-        color: $black;
-      }
-
-      #heart {
-        height: 16px;
-        width: 16px;
-
-        path {
-          fill: #c00;
-        }
-      }
-    }
-  }
+.home-page {
+  color: $light;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }

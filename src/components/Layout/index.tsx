@@ -1,8 +1,8 @@
 import React from "react";
 import * as Dapp from "@elrondnetwork/dapp";
 import routes, { routeNames } from "routes";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Banner from "components/Banner";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { loggedIn } = Dapp.useContext();
@@ -16,14 +16,26 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   }, [loggedIn]);
 
   return (
-    <div className="bg-light d-flex flex-column flex-fill wrapper">
+    <div className="d-flex flex-column flex-fill wrapper">
+      <video
+        className="background-video"
+        src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
+        playsInline
+        autoPlay
+        loop
+        muted
+      >
+        <source
+          src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
+          type="video/mp4"
+        />
+      </video>
       <Navbar />
-      <main className="d-flex flex-column flex-grow-1">
+      <main style={{ zIndex: 1 }} className="d-flex flex-column flex-grow-1">
         <Dapp.Authenticate routes={routes} unlockRoute={routeNames.unlock}>
           {children}
         </Dapp.Authenticate>
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };
