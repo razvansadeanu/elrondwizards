@@ -88,10 +88,10 @@ const Footer = () => {
               Links<span className="underlineLinks"></span>
             </p>
             <div className="menuLinks">
-              <Link to="home">Home</Link>
-              <Link to="about">About</Link>
-              <Link to="roadMap">RoadMap</Link>
-              <Link to="funds">Use of Funds</Link>
+              <Link to="/">Home</Link>
+              <Link to="/">About</Link>
+              <Link to="/">RoadMap</Link>
+              <Link to="/">Use of Funds</Link>
               <p
                 className="footerText onlyPhone"
                 style={{ marginTop: "2.5rem" }}
