@@ -9,7 +9,7 @@ export const SidebarData = [
   },
   {
     title: "About",
-    path: "#",
+    path: "/#about",
     // icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
   },
@@ -33,7 +33,7 @@ export const SidebarData = [
   },
   {
     title: "Close",
-    path: "#",
+    path: {},
     // icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
   },
