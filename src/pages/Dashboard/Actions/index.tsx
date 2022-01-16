@@ -8,7 +8,7 @@ import {
   ContractCallPayloadBuilder,
   U64Value,
 } from "@elrondnetwork/erdjs";
-import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BigNumber from "bignumber.js";
 import { contractAddress } from "config";
@@ -112,17 +112,20 @@ const Actions = () => {
   const notAllowedClass = pongAllowed ? "" : "not-allowed disabled";
 
   return (
-    <div className="d-flex mt-4 justify-content-center">
+    <div className="d-flex justify-content-center" style={{ margin: "none" }}>
       {hasPing !== undefined && (
         <>
           {hasPing ? (
             <div className="action-btn">
               <button onClick={send(mintTransaction)}>
-                <FontAwesomeIcon icon={faArrowUp} className="text-primary" />
+                <span>
+                  <FontAwesomeIcon icon={faShoppingCart} />
+                </span>
+                BUY
               </button>
-              <a href="/" className="text-white text-decoration-none">
-                Mint
-              </a>
+              {/* <a href="/" className="text-white text-decoration-none">
+                Buy now
+              </a> */}
             </div>
           ) : (
             <>
@@ -135,7 +138,7 @@ const Actions = () => {
                 >
                   <button className={`btn ${notAllowedClass}`}>
                     <FontAwesomeIcon
-                      icon={faArrowDown}
+                      icon={faShoppingCart}
                       className="text-primary"
                     />
                   </button>

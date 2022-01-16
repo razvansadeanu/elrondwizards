@@ -91,18 +91,32 @@ html {
   justify-content: center;
   align-items: center;
   color: $black;
-  margin: 0 7px;
+  border-radius: 5px;
+  background-color: $green;
+  padding: 0px 0px 0px 0px;
+  font-size: 1.5rem;
+
+  width: 100%;
+  color: white;
   button {
-    padding: 10px 40px 10px 40px;
-    background-color: black;
+    padding: 30px 0 30px 0;
     border-radius: 5px;
-    box-shadow: 0px 3px 10px $black;
+    background-color: $green;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
     border: none;
-    margin-bottom: 10px;
-    &:hover {
-      opacity: 0.9;
+    color: white;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  span {
+    .fa-w-18 {
+      color: white;
+      margin-right: 10px;
     }
   }
+
   a {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
@@ -243,11 +257,110 @@ html {
   }
 }
 
+/* TopInfo
+-------------------------------------------------- */
+.nft-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  @include media("<=1000px") {
+    font-size: 1.2rem;
+    justify-content: space-between;
+  }
+  @include media("<=770px") {
+    flex-direction: row;
+  }
+  @include media("<=500px") {
+    display: none;
+  }
+  .nft-section {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid lightgray;
+    padding: 15px 20px;
+    margin-top: 20px;
+    @include media("<=1000px") {
+      padding: 8px 15px;
+      margin-top: 15px;
+    }
+    @include media("<=770px") {
+      border-bottom: none;
+      border-radius: 5px;
+    }
+    @include media("<=500px") {
+      padding: 7px 10px;
+    }
+  }
+}
+
+.nft-responsive {
+  display: none;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 1.2rem;
+
+  @include media("<=500px") {
+    display: flex;
+  }
+  .nft-r-section {
+    padding: 10px 45px;
+    @include media("<=390px") {
+      padding: 7px 20px;
+    }
+  }
+}
+
 /* Gif image
 -------------------------------------------------- */
 .gifImage {
-  margin-top: 1rem;
-  height: 600px;
+  height: 750px;
   object-fit: contain;
-  width: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  @include media("<=1200px") {
+    max-height: 700px;
+  }
+  @include media("<=510px") {
+    height: 600px;
+  }
+  @include media("<=510px") {
+    height: 600px;
+  }
+  @include media("<=510px") {
+    max-height: 550px;
+  }
+  @include media("<=400px") {
+    max-height: 500px;
+  }
+  @include media("<=390px") {
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  // @include media("<=600px") {
+  //   object-fit: cover;
+  //   height: 600px;
+  // }
+}
+
+/* Dashboard
+-------------------------------------------------- */
+.container-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .left-part {
+    background-color: black;
+    border-radius: 5px;
+    @include media("<=770px") {
+      margin-bottom: 20px;
+    }
+    @include media("<=500px") {
+      margin-bottom: 20px;
+    }
+  }
+  @include media("<=770px") {
+    flex-direction: column;
+  }
 }

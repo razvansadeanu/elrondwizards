@@ -55,7 +55,7 @@ const Banner = () => {
           </div>
           <Link
             to={routeNames.unlock}
-            className="claimButton"
+            className="secondClaimButton"
             data-testid="loginBtn"
           >
             <p>BUY NOW</p>

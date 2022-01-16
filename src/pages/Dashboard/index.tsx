@@ -58,9 +58,11 @@ const Dashboard = () => {
           <div className="card shadow-sm rounded border-0">
             <div className="card-body p-1">
               <div className="card rounded border-0">
-                <div className="card-body text-center p-4">
-                  <TopInfo />
-                  <Actions />
+                <div className="card-body text-center p-4 container-flex">
+                  <div className="left-part">
+                    <Actions />
+                    <TopInfo />
+                  </div>
                   <GifImage />
                 </div>
               </div>
