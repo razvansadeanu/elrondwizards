@@ -54,7 +54,7 @@ const About = () => {
           through the shadows was: &quot; Are you among the chosen ones?
           <br />
           <br />
-          &quot; ...So are you?&quot;
+          ...So are you?&quot;
         </p>
         <ReadMore text="ceva">
           However, after many moons passed, people slowly became greedy, wanting
