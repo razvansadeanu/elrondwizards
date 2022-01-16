@@ -16,6 +16,9 @@ Override Bootstrap variables only above.
 // Dapp-utils
 @import "./../../../node_modules/@elrondnetwork/dapp-utils/dist/dapp-utils.scss";
 
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
+
 // Locals
 @import "./breakpoints.scss";
 @import "./header.scss";
@@ -32,6 +35,9 @@ Override Bootstrap variables only above.
 html {
   min-height: 100%;
   font-size: 14px;
+}
+body {
+  font-family: "Jura", sans-serif;
 }
 
 .wrapper {
