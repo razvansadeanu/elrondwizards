@@ -117,6 +117,13 @@ const Navbar = () => {
               </li>
             );
           })}
+          {loggedIn && (
+            <li className="nav-text">
+              <Link to="/" onClick={logOut}>
+                <span>Logout</span>
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </>

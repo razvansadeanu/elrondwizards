@@ -33,7 +33,7 @@ export const SidebarData = [
   },
   {
     title: "Close",
-    path: "/support",
+    path: "#",
     // icon: <IoIcons.IoMdHelpCircle />,
     cName: "nav-text",
   },
