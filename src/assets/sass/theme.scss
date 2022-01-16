@@ -371,3 +371,14 @@ body {
     flex-direction: column;
   }
 }
+
+/* Modal
+-------------------------------------------------- */
+.modal-content {
+  .card {
+    background-color: black !important;
+    span {
+      background-color: black !important;
+    }
+  }
+}
