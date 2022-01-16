@@ -112,7 +112,7 @@ const Navbar = () => {
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
                   {/* {item.icon} */}
-                  <span>{item.title}</span>
+                  {item.title}
                 </Link>
               </li>
             );
@@ -120,7 +120,7 @@ const Navbar = () => {
           {loggedIn && (
             <li className="nav-text">
               <Link to="/" onClick={logOut}>
-                <span>Logout</span>
+                Logout
               </Link>
             </li>
           )}
