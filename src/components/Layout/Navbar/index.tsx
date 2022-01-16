@@ -41,10 +41,9 @@ const Navbar = () => {
       <div className="header">
         <div className="headerContainer">
           <div className="logo">
-            {/* <img src={logo} alt="" /> */}
             <div>
-              <h1>elrond</h1>
-              <h1 className="textSpace">wizards</h1>
+              <h2>elrond</h2>
+              <h2 className="textSpace">wizards</h2>
             </div>
           </div>
           <div className="socialsMenu">

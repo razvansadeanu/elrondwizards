@@ -99,6 +99,11 @@ span {
       @include media("<=tablet") {
         font-size: 0.8rem;
       }
+      div {
+        h2 {
+          margin: 0px;
+        }
+      }
       .textSpace {
         margin-left: 2.5rem;
       }
