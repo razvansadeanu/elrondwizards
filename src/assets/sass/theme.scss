@@ -1,0 +1,384 @@
+/* Bootstrap overrides
+-------------------------------------------------- */
+$body: #000;
+$headings-font-weight: 300 !important;
+$primary: #1b46c2;
+$light: #fafafa;
+$green: #0bd2f5;
+
+/* Do not move the imports from here. 
+Override Bootstrap variables only above.
+-------------------------------------------------- */
+
+// Bootstrap
+@import "./../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Dapp-utils
+@import "./../../../node_modules/@elrondnetwork/dapp-utils/dist/dapp-utils.scss";
+
+//Font
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
+
+// Locals
+@import "./breakpoints.scss";
+@import "./header.scss";
+@import "./video.scss";
+@import "./banner.scss";
+@import "./about.scss";
+@import "./roadMap.scss";
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import "./useOfFounds.scss";
+@import "./footer.scss";
+
+/* Base
+-------------------------------------------------- */
+html {
+  min-height: 100%;
+  font-size: 14px;
+}
+body {
+  font-family: "Jura", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.opacity-6 {
+  opacity: 0.6;
+}
+
+.dapp-icon {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: $light;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &.icon-medium {
+    width: 80px;
+    height: 80px;
+  }
+}
+/* Video
+-------------------------------------------------- */
+.background-video {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  opacity: 1;
+}
+
+/* Navbar
+-------------------------------------------------- */
+.elrond-logo {
+  width: 85px;
+  height: 25px;
+}
+
+.dapp-name {
+  line-height: 1;
+  border-left: 1px solid $gray-400;
+  padding-left: 3px;
+  margin-left: 4px;
+}
+
+/* Dashboard
+-------------------------------------------------- */
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  border-radius: 5px;
+  background-color: $green;
+  padding: 0px 0px 0px 0px;
+  font-size: 1.5rem;
+
+  width: 100%;
+  color: white;
+  button {
+    padding: 30px 0 30px 0;
+    border-radius: 5px;
+    background-color: $green;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    border: none;
+    color: white;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  span {
+    .fa-w-18 {
+      color: white;
+      margin-right: 10px;
+    }
+  }
+
+  a {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.transactions {
+  .transaction-icon {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  &.table {
+    .transaction-hash .trim {
+      @include media-breakpoint-down(xl) {
+        max-width: none;
+      }
+      @include media-breakpoint-down(lg) {
+        max-width: 26rem;
+      }
+      @include media-breakpoint-down(md) {
+        max-width: 12rem;
+      }
+      @include media-breakpoint-down(sm) {
+        max-width: 8rem;
+      }
+    }
+
+    td,
+    tr {
+      padding: 0.65rem;
+    }
+
+    td {
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+
+    tr:last-of-type {
+      td {
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+  }
+}
+
+/* Actions
+-------------------------------------------------- */
+
+.not-allwed {
+  cursor: not-allowed;
+}
+
+/* Loader, Transaction Success/Fail
+-------------------------------------------------- */
+.page-state {
+  .lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .bg-blue .lds-ellipsis div {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
+}
+
+/* Home Page
+-------------------------------------------------- */
+.home-page {
+  color: $light;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+/* Unlock
+-------------------------------------------------- */
+.card {
+  background-color: transparent;
+  box-shadow: 0px 7px 20px $green;
+  color: white;
+  .btn-primary {
+    background-color: $black;
+    border: none;
+    box-shadow: 0px 3px 10px $black;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+/* TopInfo
+-------------------------------------------------- */
+.nft-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  @include media("<=1000px") {
+    font-size: 1.2rem;
+    justify-content: space-between;
+  }
+  @include media("<=770px") {
+    flex-direction: row;
+  }
+  @include media("<=500px") {
+    display: none;
+  }
+  .nft-section {
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid lightgray;
+    padding: 15px 20px;
+    margin-top: 20px;
+    @include media("<=1000px") {
+      padding: 8px 15px;
+      margin-top: 15px;
+    }
+    @include media("<=770px") {
+      border-bottom: none;
+      border-radius: 5px;
+    }
+    @include media("<=500px") {
+      padding: 7px 10px;
+    }
+  }
+}
+
+.nft-responsive {
+  display: none;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 1.2rem;
+
+  @include media("<=500px") {
+    display: flex;
+  }
+  .nft-r-section {
+    padding: 10px 45px;
+    @include media("<=390px") {
+      padding: 7px 20px;
+    }
+  }
+}
+
+/* Gif image
+-------------------------------------------------- */
+.gifImage {
+  height: 750px;
+  object-fit: contain;
+  max-width: 100%;
+  border-radius: 5px;
+  @include media("<=1200px") {
+    max-height: 700px;
+  }
+  @include media("<=510px") {
+    height: 600px;
+  }
+  @include media("<=510px") {
+    height: 600px;
+  }
+  @include media("<=510px") {
+    max-height: 550px;
+  }
+  @include media("<=400px") {
+    max-height: 500px;
+  }
+  @include media("<=390px") {
+    max-height: 480px;
+    object-fit: cover;
+  }
+
+  // @include media("<=600px") {
+  //   object-fit: cover;
+  //   height: 600px;
+  // }
+}
+
+/* Dashboard
+-------------------------------------------------- */
+.container-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .left-part {
+    background-color: black;
+    border-radius: 5px;
+    @include media("<=770px") {
+      margin-bottom: 20px;
+    }
+    @include media("<=500px") {
+      margin-bottom: 20px;
+    }
+  }
+  @include media("<=770px") {
+    flex-direction: column;
+  }
+}
+
+/* Modal
+-------------------------------------------------- */
+.modal-content {
+  .card {
+    background-color: black !important;
+    span {
+      background-color: black !important;
+    }
+  }
+}
