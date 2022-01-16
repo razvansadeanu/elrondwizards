@@ -61,17 +61,17 @@ const TopInfo = () => {
         <div>
           <div className="nft-r-section" style={{ border: "none" }}>
             <p>Items in Collection:</p>
-            <p>444</p>
+            <p>{data}</p>
           </div>
           <div className="nft-r-section" style={{ borderLeft: "none" }}>
             <p>Total Supply:</p>
-            <p>3333</p>
+            <p>{total_supply}</p>
           </div>
         </div>
         <div>
           <div className="nft-r-section" style={{ borderTop: "none" }}>
             <p>Left to mint:</p>
-            <p>3170</p>
+            <p>{leftToMint}</p>
           </div>
           <div className="nft-r-section">
             <p>Minting Price:</p>
