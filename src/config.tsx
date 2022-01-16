@@ -13,14 +13,14 @@ export const walletConnectDeepLink =
   "https://maiar.page.link/?apn=com.elrond.maiar.wallet&isi=1519405832&ibi=com.elrond.maiar.wallet.dev&link=https://maiar.com/";
 
 export const contractAddress =
-  "erd1qqqqqqqqqqqqqpgq9qxa94es8hx9499e2fe7pfyrlt4sz3g6lwfq3xkh0x";
+  "erd1qqqqqqqqqqqqqpgqnnh9wnda0frj0cj2r9wfgstxqhn9pgq9lwfqsfen4y";
 
 export const network: Dapp.NetworkType = {
-  id: "testnet",
-  name: "Testnet",
-  egldLabel: "XeGLD",
-  walletAddress: "https://testnet-wallet.elrond.com/dapp/init",
-  apiAddress: "https://testnet-api.elrond.com",
-  gatewayAddress: "https://testnet-gateway.elrond.com",
-  explorerAddress: "http://testnet-explorer.elrond.com/",
+  id: "mainnet",
+  name: "MainNet",
+  egldLabel: "EGLD",
+  walletAddress: "https://wallet.elrond.com/dapp/init",
+  apiAddress: "https://api.elrond.com",
+  gatewayAddress: "https://gateway.elrond.com",
+  explorerAddress: "http://explorer.elrond.com/",
 };

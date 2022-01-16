@@ -15,6 +15,7 @@ import { contractAddress } from "config";
 import { RawTransactionType } from "helpers/types";
 import useNewTransaction from "pages/Transaction/useNewTransaction";
 import { routeNames } from "routes";
+import axios from "axios";
 
 const Actions = () => {
   const sendTransaction = Dapp.useSendTransaction();
@@ -22,6 +23,16 @@ const Actions = () => {
   const newTransaction = useNewTransaction();
   const [secondsLeft, setSecondsLeft] = React.useState<number>();
   const [hasPing, setHasPing] = React.useState<boolean>();
+
+  const contractCallBuilder = new ContractCallPayloadBuilder().setFunction(
+    new ContractFunction("mint_nft"),
+  );
+  let nonce = 1;
+  const total_supply = 3333;
+  const prime = 110503;
+  let shuffled = ((nonce * prime) % total_supply) + 1;
+  contractCallBuilder.addArg(new U64Value(new BigNumber(shuffled)));
+  let payload = contractCallBuilder.build();
 
   const mount = () => {
     if (secondsLeft) {
@@ -40,6 +51,22 @@ const Actions = () => {
       };
     }
   };
+  const fetchData = async () => {
+    const result = await axios(
+      "https://api.elrond.com/nfts/count?collection=EWIZZ-1e8ddb",
+    );
+    nonce = result.data + 1;
+    shuffled = ((nonce * prime) % total_supply) + 1;
+    contractCallBuilder.addArg(new U64Value(new BigNumber(shuffled)));
+    payload = contractCallBuilder.build();
+  };
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      fetchData();
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(mount, [hasPing]);
@@ -50,6 +77,7 @@ const Actions = () => {
       func: new ContractFunction("mint_nft"),
       args: [new AddressValue(new Address(address))],
     });
+    fetchData();
     dapp.proxy
       .queryContract(query)
       .then(({ returnData }) => {
@@ -76,16 +104,6 @@ const Actions = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const contractCallBuilder = new ContractCallPayloadBuilder().setFunction(
-    new ContractFunction("mint_nft"),
-  );
-
-  const total_supply = 5;
-  const prime = 110503;
-  const shuffled = ((5 * prime) % total_supply) + 1;
-  contractCallBuilder.addArg(new U64Value(new BigNumber(shuffled)));
-  const payload = contractCallBuilder.build();
-
   const send = (transaction: RawTransactionType) => (e: React.MouseEvent) => {
     e.preventDefault();
     sendTransaction({
@@ -97,10 +115,9 @@ const Actions = () => {
   const mintTransaction: RawTransactionType = {
     data: payload,
     receiver: contractAddress,
-    value: "0.1",
+    value: "0.5",
     gasLimit: 100000000,
   };
-
   const pongTransaction: RawTransactionType = {
     receiver: contractAddress,
     payload: "pong",
