@@ -29,7 +29,7 @@ const ReadMore: FC<Props> = ({ children, ...props }) => {
           through the shadows was: &quot; Are you among the chosen ones?
           <br />
           <br />
-          &quot; ...So are you?
+          &quot; ...So are you?&quot;
         </span>
       )}
       <span

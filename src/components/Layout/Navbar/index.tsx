@@ -42,8 +42,10 @@ const Navbar = () => {
         <div className="headerContainer">
           <div className="logo">
             <div>
-              <h2>elrond</h2>
-              <h2 className="textSpace">wizards</h2>
+              <Link to="/">
+                <h2>elrond</h2>
+                <h2 className="textSpace">wizards</h2>
+              </Link>
             </div>
           </div>
           <div className="socialsMenu">

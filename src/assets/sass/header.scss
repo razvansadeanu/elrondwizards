@@ -93,6 +93,7 @@ span {
     .logo {
       display: flex;
       align-items: center;
+
       @include media("<=desktop") {
         font-size: 0.9rem;
       }
@@ -102,6 +103,11 @@ span {
       div {
         h2 {
           margin: 0px;
+          text-decoration: none;
+        }
+        a {
+          text-decoration: none;
+          color: white;
         }
       }
       .textSpace {
