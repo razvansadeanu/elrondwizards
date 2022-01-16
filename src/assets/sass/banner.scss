@@ -78,10 +78,10 @@
       cursor: pointer;
       outline: none;
       border-radius: 10px;
-      border: 3px solid $green;
-      box-shadow: 0px 4px 20px $green;
+      border: 3px solid $black;
+      box-shadow: 0px 4px 20px $black;
       color: $green;
-      background-color: transparent;
+      background-color: black;
       font-weight: 500;
       transition: all 0.3s ease-in-out;
       text-decoration: none;
@@ -110,6 +110,11 @@
         box-shadow: 0px 4px 10px rgba(55, 150, 240, 0);
       }
     }
+  }
+  .isengardButton {
+    background-color: transparent !important;
+    border: 3px solid $green !important;
+    box-shadow: 0px 4px 20px $green !important;
   }
   .imageContainer {
     display: flex;
@@ -224,14 +229,13 @@
       cursor: pointer;
       outline: none;
       border-radius: 10px;
-      border: 3px solid $green;
-      box-shadow: 0px 4px 10px $green;
+      border: 3px solid $black;
+      box-shadow: 0px 4px 10px $black;
       color: $green;
-      background-color: transparent;
+      background-color: black;
       transition: all 0.3s ease-in-out;
       font-weight: 500;
       display: none;
-
       text-decoration: none;
       @include media("<=700px") {
         display: flex;
@@ -245,6 +249,11 @@
       &:hover {
         box-shadow: 0px 5px 12px rgba(55, 150, 240, 0);
       }
+    }
+    .secontIsengardButton {
+      background-color: transparent !important;
+      border: 3px solid $green !important;
+      box-shadow: 0px 4px 20px $green !important;
     }
   }
 }

@@ -18,7 +18,17 @@ const Banner = () => {
           className="claimButton"
           data-testid="loginBtn"
         >
-          <p>BUY NOW</p>
+          <p>MINT HERE</p>
+        </Link>
+        <Link
+          to="#"
+          onClick={() =>
+            window.open("https://isengard.market/collection/EWIZZ-1e8ddb")
+          }
+          className="claimButton isengardButton"
+          data-testid="loginBtn"
+        >
+          <p>MINT ON INSENGARD</p>
         </Link>
       </div>
       <div className="imageContainer">
@@ -58,7 +68,17 @@ const Banner = () => {
             className="secondClaimButton"
             data-testid="loginBtn"
           >
-            <p>BUY NOW</p>
+            <p>MINT HERE</p>
+          </Link>
+          <Link
+            to="#"
+            className="secondClaimButton secontIsengardButton"
+            onClick={() =>
+              window.open("https://isengard.market/collection/EWIZZ-1e8ddb")
+            }
+            data-testid="loginBtn"
+          >
+            <p>MINT ON INSENGARD</p>
           </Link>
         </div>
       </div>
