@@ -23,13 +23,13 @@ const UseOfFounds = () => {
               fontSize: "8px",
             }}
             data={[
-              { title: "five", value: 5, color: "#0bd2f5" },
-              { title: "four", value: 10, color: "#07a1e985" },
+              { title: "five", value: 15, color: "#0bd2f5" },
+              { title: "four", value: 20, color: "#07a1e985" },
               { title: "Three", value: 10, color: "#0cf0f0bb" },
-              { title: "Two", value: 25, color: "#03272cca" },
+              { title: "Two", value: 30, color: "#03272cca" },
               {
                 title: "One",
-                value: 50,
+                value: 25,
                 color: "#045664",
               },
             ]}
@@ -62,19 +62,19 @@ const UseOfFounds = () => {
         <div className="textContainer">
           <div className="textContent">
             <p className={selected === 0 ? "active" : ""}>
-              5% - Investigative Journalism
+              15% - Investigative Journalism
             </p>
             <p className={selected === 1 ? "active" : ""}>
-              10% - Reforestation
+              20% - Reforestation
             </p>
             <p className={selected === 2 ? "active" : ""}>
               10% - Children Foundation
             </p>
             <p className={selected === 3 ? "active" : ""}>
-              25% - Future projects
+              30% - Future projects
             </p>
             <p className={selected === 4 ? "active" : ""}>
-              50% - Investors and Team
+              25% - Investors and Team
             </p>
           </div>
         </div>
