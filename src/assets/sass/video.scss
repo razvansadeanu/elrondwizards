@@ -1,0 +1,136 @@
+.video {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  margin-top: 5rem;
+  @include media("<=1000px") {
+    margin-top: 4rem;
+  }
+  @include media("<=800px") {
+    margin-top: 2rem;
+  }
+  @include media("<=500px") {
+    margin-top: 1rem;
+  }
+  .introText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .title {
+      font-size: 2.7rem;
+      letter-spacing: 0.1em;
+      @include media("<=1100px") {
+        font-size: 2.4rem;
+      }
+      @include media("<=900px") {
+        font-size: 2.2rem;
+      }
+      @include media("<=390px") {
+        font-size: 2rem;
+      }
+      @include media("<=360px") {
+        font-size: 1.7rem;
+      }
+    }
+    .releaseText {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: $green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include media("<=700px") {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+        align-items: center;
+      }
+      .releaseSpan {
+        margin-bottom: 10px;
+      }
+      .countDownContainer {
+        font-size: 1.5rem;
+        display: flex;
+        letter-spacing: 0.2rem;
+        @include media("<=500px") {
+          font-size: 1.3rem;
+          letter-spacing: 0.1rem;
+        }
+        .countDownText {
+          display: flex;
+          font-size: 1.5rem;
+          margin-right: 15px;
+          flex-direction: column;
+          align-items: center;
+          @include media("<=500px") {
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+          }
+          @include media("<=400px") {
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+          }
+        }
+      }
+    }
+
+    .intro {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      line-height: 2rem;
+      opacity: 0.8;
+      width: 50%;
+      text-align: justify;
+    }
+  }
+  .videoCover {
+    margin-top: 1.5rem;
+    box-shadow: 0px 7px 20px $green;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    .intoVideo {
+      width: 100%;
+      border-radius: 20px;
+      height: 100%;
+    }
+    &:hover {
+      box-shadow: 0px 0px 0px $green;
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .playButton {
+      border-radius: 100%;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 4px 30px $green;
+        padding: 15px;
+        border-radius: 100%;
+        border: 2px solid $green;
+        background-color: transparent;
+        opacity: 0.7;
+        transition: all 0.3s ease-in-out;
+        .fa-w-14 {
+          color: $green;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
