@@ -31,10 +31,4 @@ export const SidebarData = [
     // icon: <FaIcons.FaEnvelopeOpenText />,
     cName: "nav-text",
   },
-  {
-    title: "Close",
-    path: {},
-    // icon: <IoIcons.IoMdHelpCircle />,
-    cName: "nav-text",
-  },
 ];
