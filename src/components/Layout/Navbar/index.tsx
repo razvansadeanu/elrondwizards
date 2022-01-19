@@ -97,6 +97,17 @@ const Navbar = () => {
                 />
               </span>
             </div>
+            <div className="whiteButton">
+              <h3
+                onClick={() => {
+                  window.open(
+                    "https://stelrondwizardsweb.blob.core.windows.net/static/Whitepaper.pdf",
+                  );
+                }}
+              >
+                Whitepaper
+              </h3>
+            </div>
             <div className="menuButton" onClick={showSidebar}>
               <h2>Menu.</h2>
             </div>
@@ -118,6 +129,21 @@ const Navbar = () => {
               </li>
             );
           })}
+          <li className="nav-text">
+            <Link
+              to="#"
+              onClick={() => {
+                window.open(
+                  "https://stelrondwizardsweb.blob.core.windows.net/static/Whitepaper.pdf",
+                );
+              }}
+            >
+              Whitepaper
+            </Link>
+          </li>
+          <li className="nav-text">
+            <Link to="#">Close</Link>
+          </li>
           {loggedIn && (
             <li className="nav-text">
               <Link to="/" onClick={logOut}>
