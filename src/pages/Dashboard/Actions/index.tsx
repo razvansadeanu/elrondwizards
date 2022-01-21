@@ -133,8 +133,8 @@ const Actions = () => {
       {hasPing !== undefined && (
         <>
           {hasPing ? (
-            <div className="action-btn">
-              <button onClick={send(mintTransaction)}>
+            <div className="action-btn" onClick={send(mintTransaction)}>
+              <button>
                 <span>
                   <FontAwesomeIcon icon={faShoppingCart} />
                 </span>
