@@ -1,17 +1,6 @@
 import React, { useState } from "react";
 import * as Dapp from "@elrondnetwork/dapp";
-import {
-  Button,
-  Container,
-  Form,
-  FormControl,
-  Nav,
-  Navbar as BsNavbar,
-  NavDropdown,
-} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
-import { dAppName } from "config";
-import { ReactComponent as ElrondLogo } from "./../../../assets/img/elrond.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -20,6 +9,8 @@ import {
   faTwitter,
   faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
+
+import { faWallet } from "@fortawesome/free-solid-svg-icons";
 import { SidebarData } from "./SidebarData";
 
 const Navbar = () => {
@@ -97,17 +88,22 @@ const Navbar = () => {
                 />
               </span>
             </div>
-            <div className="whiteButton">
-              <h3
-                onClick={() => {
-                  window.open(
-                    "https://stelrondwizardsweb.blob.core.windows.net/static/Whitepaper.pdf",
-                  );
-                }}
-              >
-                Whitepaper
-              </h3>
-            </div>
+            {loggedIn ? (
+              <Link className="whiteButton" to="/" onClick={logOut}>
+                <span>
+                  <FontAwesomeIcon icon={faWallet} />
+                </span>
+                <h3>Logout</h3>
+              </Link>
+            ) : (
+              <Link className="whiteButton" to="/dashboard">
+                <span>
+                  <FontAwesomeIcon icon={faWallet} />
+                </span>
+                <h3>Wallet</h3>
+              </Link>
+            )}
+
             <div className="menuButton" onClick={showSidebar}>
               <h2>Menu.</h2>
             </div>
