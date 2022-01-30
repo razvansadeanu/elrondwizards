@@ -28,7 +28,7 @@ const Banner = () => {
           className="claimButton isengardButton"
           data-testid="loginBtn"
         >
-          <p>MINT ON INSENGARD</p>
+          <p>MINT ON ISENGARD</p>
         </Link>
       </div>
       <div className="imageContainer">
@@ -78,7 +78,7 @@ const Banner = () => {
             }
             data-testid="loginBtn"
           >
-            <p>MINT ON INSENGARD</p>
+            <p>MINT ON ISENGARD</p>
           </Link>
         </div>
       </div>
