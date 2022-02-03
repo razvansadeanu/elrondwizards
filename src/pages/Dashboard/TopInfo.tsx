@@ -75,7 +75,7 @@ const TopInfo = () => {
           </div>
           <div className="nft-r-section">
             <p>Minting Price:</p>
-            <p>0.5 EGLD</p>
+            <p>0.75 EGLD</p>
           </div>
         </div>
       </div>
