@@ -5,16 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageState from "components/PageState";
 import { contractAddress } from "config";
 import { useContext, useDispatch } from "context";
-import Actions from "./Actions";
 import { getTransactions } from "./helpers/asyncRequests";
-import TopInfo from "./TopInfo";
-import Transactions from "./Transactions";
-import GifImage from "./GifImage";
+import Buy from "./Buy";
+import NFT from "pages/NFT";
+import Explore from "pages/Explore";
 
 const Dashboard = () => {
   const ref = React.useRef(null);
   const { apiAddress, address } = Dapp.useContext();
   const { transactionsFetched } = useContext();
+  const [activeTab, setActiveTab] = React.useState({
+    tab1: true,
+    tab2: false,
+    tab3: false,
+  });
   const dispatch = useDispatch();
 
   const fetchData = () => {
@@ -30,6 +34,29 @@ const Dashboard = () => {
         transactionsFetched: success,
       });
     });
+  };
+
+  const handleTabSwitch = (e: any) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+    if (value.includes("Explore"))
+      setActiveTab({
+        tab1: false,
+        tab2: false,
+        tab3: true,
+      });
+    if (value.includes("NFT"))
+      setActiveTab({
+        tab1: false,
+        tab2: true,
+        tab3: false,
+      });
+    if (value.includes("Buy"))
+      setActiveTab({
+        tab1: true,
+        tab2: false,
+        tab3: false,
+      });
   };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,22 +82,33 @@ const Dashboard = () => {
     <div className="container py-4" ref={ref}>
       <div className="row">
         <div className="col-12 col-md-10 mx-auto">
-          <div className="card shadow-sm rounded border-0">
-            <div className="card-body p-1">
-              <div className="card rounded border-0">
-                <div className="card-body text-center p-4 container-flex">
-                  <div className="left-part">
-                    <Actions />
-                    <TopInfo />
-                  </div>
-                  <GifImage />
-                </div>
-              </div>
-              {/* <Transactions /> */}
+          <div className="navs">
+            <div
+              className={`nav-buy ${activeTab.tab1 ? "tab-active" : ""}`}
+              onClick={handleTabSwitch}
+            >
+              <span>Buy</span>
+            </div>
+            <div
+              className={`nav-nft ${activeTab.tab2 ? "tab-active" : ""}`}
+              onClick={handleTabSwitch}
+            >
+              <span>My NFT</span>
+            </div>
+            <div
+              className={`nav-explore ${activeTab.tab3 ? "tab-active" : ""}`}
+              onClick={handleTabSwitch}
+            >
+              <span>Explore</span>
             </div>
           </div>
         </div>
       </div>
+      {(() => {
+        if (activeTab.tab1) return <Buy />;
+        if (activeTab.tab2) return <NFT />;
+        if (activeTab.tab3) return <Explore />;
+      })()}
     </div>
   );
 };

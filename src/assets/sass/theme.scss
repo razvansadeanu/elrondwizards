@@ -6,7 +6,7 @@ $primary: #1b46c2;
 $light: #fafafa;
 $green: #0bd2f5;
 
-/* Do not move the imports from here. 
+/* Do not move the imports from here.
 Override Bootstrap variables only above.
 -------------------------------------------------- */
 
@@ -379,6 +379,271 @@ body {
     background-color: black !important;
     span {
       background-color: black !important;
+    }
+  }
+}
+
+/* Navs Tab
+-------------------------------------------------- */
+.navs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 1.7rem;
+  border-radius: 30px;
+  box-shadow: 0px 3px 10px $black;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  @include media("<=405px") {
+    font-size: 1.5rem;
+  }
+  @include media("<=375px") {
+    font-size: 1.2rem;
+  }
+  @include media("<=335px") {
+    font-size: 1.1rem;
+  }
+  @include media("<=315px") {
+    font-size: 1rem;
+  }
+  .nav-buy {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    border-radius: 30px 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $green;
+      box-shadow: 0px 3px 10px $green;
+    }
+  }
+  .nav-nft {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $green;
+      box-shadow: 0px 3px 10px $green;
+    }
+  }
+  .nav-explore {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 30px 30px 0px;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $green;
+      box-shadow: 0px 3px 10px $green;
+    }
+  }
+  .tab-active {
+    background-color: $green;
+    box-shadow: 0px 3px 10px $green;
+  }
+}
+
+/*NFT Page
+-------------------------------------------------- */
+
+.nft_row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .nft_row_cont {
+    background-color: black;
+    box-shadow: 0px 7px 20px $black;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    .nft_container {
+      // background-color: black;
+      // box-shadow: 0px 7px 20px $black;
+      // border-radius: 10px;
+      display: flex;
+      color: white;
+      padding: 20px;
+      // margin-bottom: 2rem;
+      justify-content: space-evenly;
+      @include media("<=991px") {
+        justify-content: space-between;
+      }
+      .nft_props {
+        display: flex;
+        @include media("<=991px") {
+          flex-direction: column;
+        }
+        .nft_info {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          margin-left: 10px;
+          @include media("<=991px") {
+            // margin-left: 10px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+          }
+          .nft_text {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            padding: 5px 15px 5px 15px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            margin-bottom: 0.9rem;
+            align-items: center;
+            width: 100%;
+            @include media("<=991px") {
+              width: 70%;
+            }
+          }
+        }
+        .nft_att {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          @include media("<=991px") {
+            margin-left: 1rem;
+          }
+          @include media("<=767px") {
+            display: none;
+          }
+          .nft_att_table {
+            display: flex;
+            .nft_att_col {
+              margin-left: 1rem;
+              @include media("<=991px") {
+                margin-left: 0.1rem;
+              }
+            }
+          }
+          .nft_text {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            padding: 5px;
+            background-color: rgb(49, 47, 47);
+            border-radius: 10px;
+            margin-bottom: 0.9rem;
+            align-items: center;
+            width: 100%;
+            @include media("<=991px") {
+              width: 90%;
+              padding: 5px 10px 5px 10px;
+              font-size: 0.9rem;
+              margin-bottom: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+    img {
+      width: 50%;
+      max-height: 800px;
+      object-fit: contain;
+      border-radius: 20px;
+      @include media("<=1200px") {
+        width: 50%;
+        height: 650px;
+        align-self: center;
+      }
+      @include media("<=991px") {
+        width: 100%;
+        height: 600px;
+        align-self: center;
+      }
+      @include media("<=475px") {
+        width: 100%;
+        height: 500px;
+        align-self: center;
+        object-fit: cover;
+      }
+    }
+    .nft_responsive {
+      display: none;
+      @include media("<=991px") {
+        display: flex;
+        padding: 0px 0px 20px 20px;
+      }
+      .nft_text {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        padding: 5px 15px 5px 15px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        margin-bottom: 0rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-right: 10px;
+        @include media("<=475px") {
+          font-size: 0.9rem;
+          padding: 10px;
+        }
+        @include media("<=400px") {
+          padding: 5px;
+        }
+        @include media("<=375px") {
+          font-size: 0.8rem;
+          padding: 2px;
+        }
+      }
+    }
+    .nft_att_responsive {
+      display: none;
+      padding: 0px 0px 20px 20px;
+      justify-content: space-evenly;
+      @include media("<=767px") {
+        display: flex;
+      }
+      .nft_att_col {
+        margin-right: 10px;
+        .nft_text {
+          display: flex;
+          flex-direction: column;
+          font-size: 1rem;
+          padding: 15px 15px 15px 15px;
+          background-color: rgb(49, 47, 47);
+          border-radius: 10px;
+          margin-bottom: 0.9rem;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          @include media("<=475px") {
+            font-size: 0.9rem;
+            padding: 10px;
+          }
+          @include media("<=400px") {
+            padding: 5px;
+          }
+          @include media("<=375px") {
+            font-size: 0.8rem;
+            padding: 2px;
+          }
+        }
+      }
     }
   }
 }

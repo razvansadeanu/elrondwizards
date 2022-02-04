@@ -118,62 +118,17 @@ const Actions = () => {
     value: "0.75",
     gasLimit: 100000000,
   };
-  const pongTransaction: RawTransactionType = {
-    receiver: contractAddress,
-    payload: "pong",
-    value: "0",
-    gasLimit: 10000000,
-  };
-
-  const pongAllowed = secondsLeft === 0;
-  const notAllowedClass = pongAllowed ? "" : "not-allowed disabled";
 
   return (
     <div className="d-flex justify-content-center" style={{ margin: "none" }}>
-      {hasPing !== undefined && (
-        <>
-          {hasPing ? (
-            <div className="action-btn">
-              <button onClick={send(mintTransaction)}>
-                <span>
-                  <FontAwesomeIcon icon={faShoppingCart} />
-                </span>
-                BUY
-              </button>
-              {/* <a href="/" className="text-white text-decoration-none">
-                Buy now
-              </a> */}
-            </div>
-          ) : (
-            <>
-              <div className="d-flex flex-column">
-                <div
-                  {...{
-                    className: `action-btn ${notAllowedClass}`,
-                    ...(pongAllowed ? { onClick: send(pongTransaction) } : {}),
-                  }}
-                >
-                  <button className={`btn ${notAllowedClass}`}>
-                    <FontAwesomeIcon
-                      icon={faShoppingCart}
-                      className="text-primary"
-                    />
-                  </button>
-                  <span className="text-white">
-                    {pongAllowed ? (
-                      <a href="/" className="text-white text-decoration-none">
-                        Pong
-                      </a>
-                    ) : (
-                      <>Pong</>
-                    )}
-                  </span>
-                </div>
-              </div>
-            </>
-          )}
-        </>
-      )}
+      <div className="action-btn" onClick={send(mintTransaction)}>
+        <button>
+          <span>
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </span>
+          BUY
+        </button>
+      </div>
     </div>
   );
 };
