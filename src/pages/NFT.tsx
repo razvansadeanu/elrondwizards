@@ -10,8 +10,6 @@ const NFT = () => {
     account: { balance },
   } = Dapp.useContext();
 
-  const address1 =
-    "erd1dehtfljwnyk885kavnlhmt9f2kek0qm5epk0wv5t987x9jfy6qcqn2vnrs";
   React.useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
@@ -20,20 +18,21 @@ const NFT = () => {
       setNFTS(result.data);
     };
     fetchData();
-    console.log(nfts);
   }, []);
-
-  React.useEffect(() => {
-    const fetchMetadata = async (nftNumber: string) => {
-      const result = await axios(
-        `https://func-wizards-backend.azurewebsites.net/api/NFT?id=${nftNumber}`,
-      ).then((res) => setNFTSNumber((nftsNumber) => [...nftsNumber, res.data]));
-    };
-    for (let index = 0; index < nfts.length; index++) {
-      const nftNum = nfts[index].name.split(" ");
-      fetchMetadata(nftNum[1]);
-    }
-  }, [nfts]);
+  //https://func-wizards-backend.azurewebsites.net/api/NFT?id=${nftNumber}
+  // React.useEffect(() => {
+  //   const fetchMetadata = async (nftNumber: string) => {
+  //     const result = await axios(
+  //       `http://localhost:7071/api/NFT?id=${nftNumber}`,
+  //     ).then((res) => setNFTSNumber((nftsNumber) => [...nftsNumber, res.data]));
+  //   };
+  //   for (let index = 0; index < nfts.length; index++) {
+  //     const nftNum = nfts[index].name.split(" ");
+  //     fetchMetadata(nftNum[1]);
+  //     // console.log(nftNum[1]);
+  //     console.log(nftsNumber);
+  //   }
+  // }, [nfts]);
 
   return (
     <div className="row">
@@ -42,7 +41,7 @@ const NFT = () => {
           <div className="card-body p-1">
             <div className="rounded border-0">
               <div className="nft_row">
-                {nfts.map((nft, index) => (
+                {nfts.map((nft: any, index: any) => (
                   <div className="nft_row_cont" key={index}>
                     <div className="nft_container">
                       <img src={nft.url} alt="" />
@@ -52,12 +51,10 @@ const NFT = () => {
                           <div className="nft_text">
                             <span> Name</span> <span>{nft.name}</span>
                           </div>
-
                           <div className="nft_text">
                             <span>Rarity score</span>
                             <span>
-                              {" "}
-                              {nftsNumber[index]?.rarity.rarityScore}
+                              {nft?.metadata.rarity.rarityScore.toFixed(3)}
                             </span>
                           </div>
                           <div className="nft_text">
@@ -70,7 +67,7 @@ const NFT = () => {
                           <h3>Properties:</h3>
                           <div className="nft_att_table">
                             <div className="nft_att_col">
-                              {nftsNumber[index]?.attributes
+                              {nft?.metadata.attributes
                                 .slice(0, 10)
                                 .map((attribute: any, index: any) => (
                                   <div key={index} className="nft_text">
@@ -80,7 +77,7 @@ const NFT = () => {
                                 ))}
                             </div>
                             <div className="nft_att_col">
-                              {nftsNumber[index]?.attributes
+                              {nft?.metadata.attributes
                                 .slice(10, 20)
                                 .map((attribute: any, index: any) => (
                                   <div key={index} className="nft_text">
@@ -100,7 +97,9 @@ const NFT = () => {
                       </div>
                       <div className="nft_text">
                         <span>Rarity score</span>
-                        <span> {nftsNumber[index]?.rarity.rarityScore}</span>
+                        <span>
+                          {nft?.metadata.rarity.rarityScore.toFixed(3)}
+                        </span>
                       </div>
                       <div className="nft_text">
                         <span>Identifier</span>{" "}
@@ -111,7 +110,7 @@ const NFT = () => {
                       {/* <h3>Properties:</h3> */}
 
                       <div className="nft_att_col">
-                        {nftsNumber[index]?.attributes
+                        {nft?.metadata.attributes
                           .slice(0, 7)
                           .map((attribute: any, index: any) => (
                             <div key={index} className="nft_text">
@@ -121,7 +120,7 @@ const NFT = () => {
                           ))}
                       </div>
                       <div className="nft_att_col">
-                        {nftsNumber[index]?.attributes
+                        {nft?.metadata.attributes
                           .slice(7, 14)
                           .map((attribute: any, index: any) => (
                             <div key={index} className="nft_text">
@@ -131,7 +130,7 @@ const NFT = () => {
                           ))}
                       </div>
                       <div className="nft_att_col">
-                        {nftsNumber[index]?.attributes
+                        {nft?.metadata.attributes
                           .slice(14, 20)
                           .map((attribute: any, index: any) => (
                             <div key={index} className="nft_text">
