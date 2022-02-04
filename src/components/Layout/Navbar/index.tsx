@@ -80,11 +80,7 @@ const Navbar = () => {
               <span>
                 <FontAwesomeIcon
                   icon={faDiscord}
-                  onClick={() =>
-                    window.open(
-                      "https://discord.com/channels/916259416641261579/916264363382435861",
-                    )
-                  }
+                  onClick={() => window.open("https://discord.gg/FhyTYYKNb2")}
                 />
               </span>
             </div>
