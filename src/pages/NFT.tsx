@@ -51,12 +51,12 @@ const NFT = () => {
                           <div className="nft_text">
                             <span> Name</span> <span>{nft.name}</span>
                           </div>
-                          <div className="nft_text">
+                          {/* <div className="nft_text">
                             <span>Rarity score</span>
                             <span>
                               {nft?.metadata.rarity.rarityScore.toFixed(3)}
                             </span>
-                          </div>
+                          </div> */}
                           <div className="nft_text">
                             <span>Identifier</span>{" "}
                             <span className="nft_prop">{nft.identifier}</span>
@@ -95,12 +95,12 @@ const NFT = () => {
                       <div className="nft_text">
                         <span> Name</span> <span>{nft.name}</span>
                       </div>
-                      <div className="nft_text">
+                      {/* <div className="nft_text">
                         <span>Rarity score</span>
                         <span>
                           {nft?.metadata.rarity.rarityScore.toFixed(3)}
                         </span>
-                      </div>
+                      </div> */}
                       <div className="nft_text">
                         <span>Identifier</span>{" "}
                         <span className="nft_prop">{nft.identifier}</span>
