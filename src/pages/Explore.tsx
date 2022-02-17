@@ -27,7 +27,7 @@ function Explore() {
             <div className="rounded border-0">
               <div className="explore_row">
                 {data.map((nftData: any, index: any) => (
-                  <img src={nftData.url} className="nft_img" key={index} />
+                  <img src={nftData?.url} className="nft_img" key={index} />
                 ))}
                 <div>
                   {size !== currentSize && (
