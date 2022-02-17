@@ -647,3 +647,74 @@ body {
     }
   }
 }
+
+/* Explore
+-------------------------------------------------- */
+
+.explore_row {
+  height: 300px;
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.nft_img {
+  object-fit: contain;
+  max-height: 350px;
+  width: 100%;
+  margin: 10px;
+  border-radius: 15px;
+  @include media("<=1200px") {
+    max-height: 400px;
+  }
+  @include media("<=990px") {
+    max-height: 300px;
+  }
+  @include media("<=480px") {
+    max-height: 300px;
+    margin: 3px;
+  }
+  @include media("<=460px") {
+    max-height: 250px;
+    margin: 2px;
+  }
+  @include media("<=385px") {
+    max-height: 350px;
+    margin: 5px 10px 5px 10px;
+  }
+  // @include media("<=450px") {
+  //   max-height: 250px;
+  //   margin: 2px;
+  // }
+}
+.explore_row > img {
+  flex: 1 1 150px;
+  background-color: #000;
+  padding: 15px 5px 15px 5px;
+  @include media("<=480px") {
+    padding: 10px 2px 10px 2px;
+  }
+  @include media("<=385px") {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+.explore_row > div {
+  flex: 1 1 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 5px 50px 5px;
+}
+
+.btn-load-more {
+  padding: 15px 40px 15px 40px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  background-color: #000;
+  border: none;
+  color: white;
+  box-shadow: 0px 3px 10px $black;
+}
