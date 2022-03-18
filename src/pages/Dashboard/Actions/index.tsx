@@ -116,17 +116,15 @@ const Actions = () => {
     data: payload,
     receiver: contractAddress,
     value: "0.75",
-    gasLimit: 340550000,
+    gasLimit: 100000000,
   };
-
+  // prettier-ignore
   return (
-    <div className="d-flex justify-content-center" style={{ margin: "none" }}>
+    <div className="d-flex" style={{ margin: "none" }}>
       <div className="action-btn" onClick={send(mintTransaction)}>
-        <button>
-          <span>
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </span>
-          BUY
+        <button className="btn-main">
+          Buy now
+          <img className="img-fluid btn-arrow" src="/arrow-right.svg" alt="arrow"/>
         </button>
       </div>
     </div>

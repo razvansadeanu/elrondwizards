@@ -1,150 +1,64 @@
 import React, { useState } from "react";
-import * as Dapp from "@elrondnetwork/dapp";
-import { Link, useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faTwitter,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
-
-import { faWallet } from "@fortawesome/free-solid-svg-icons";
-import { SidebarData } from "./SidebarData";
+import { slide as Menu } from "react-burger-menu";
 
 const Navbar = () => {
-  const { loggedIn } = Dapp.useContext();
-  const dappLogout = Dapp.useLogout();
-  const history = useHistory();
-
-  const logOut = (e: React.MouseEvent) => {
+  const scrollToAnchor = (
+    e: { preventDefault: () => void },
+    id: string,
+    mobile = false,
+  ) => {
     e.preventDefault();
-    dappLogout({ callbackUrl: `${window.location.origin}/` });
-    history.push("/");
+    id = "#" + id;
+    if (!document.querySelector(id)) {
+      window.location.href = "/" + id;
+    }
+    if (mobile) {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      document.getElementById("react-burger-cross-btn").click();
+    }
+    const section = document.querySelector(id);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  const [sidebar, setSidebar] = useState(false);
-
-  const showSidebar = () => setSidebar(!sidebar);
-
   return (
     <>
-      <div className="header">
-        <div className="headerContainer">
-          <div className="logo">
-            <div>
-              <Link to="/">
-                <h2>elrond</h2>
-                <h2 className="textSpace">wizards</h2>
-              </Link>
-            </div>
-          </div>
-          <div className="socialsMenu">
-            <div className="socials">
-              <span>
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  onClick={() =>
-                    window.open(
-                      "https://www.facebook.com/people/Elrond-Wizards/100075376672839/",
-                    )
-                  }
-                />
-              </span>
-              <span>
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  onClick={() =>
-                    window.open(
-                      "https://github.com/razvansadeanu/elrondwizards/tree/master",
-                    )
-                  }
-                />
-              </span>
-              <span>
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  onClick={() =>
-                    window.open("https://www.instagram.com/elrondwizards/")
-                  }
-                />
-              </span>
-              <span>
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  onClick={() =>
-                    window.open("https://twitter.com/ElrondWizards")
-                  }
-                />
-              </span>
-              <span>
-                <FontAwesomeIcon
-                  icon={faDiscord}
-                  onClick={() => window.open("https://discord.gg/FhyTYYKNb2")}
-                />
-              </span>
-            </div>
-            {loggedIn ? (
-              <Link className="whiteButton" to="/" onClick={logOut}>
-                <span>
-                  <FontAwesomeIcon icon={faWallet} />
-                </span>
-                <h3>Logout</h3>
-              </Link>
-            ) : (
-              <Link className="whiteButton" to="/dashboard">
-                <span>
-                  <FontAwesomeIcon icon={faWallet} />
-                </span>
-                <h3>Wallet</h3>
-              </Link>
-            )}
+      {/* prettier-ignore */}
+      <div>
 
-            <div className="menuButton" onClick={showSidebar}>
-              <h2>Menu.</h2>
-            </div>
+
+        <div className="menu-bg" style={{ backgroundImage: "url(/menu-bg.png)" }}>
+          <div className="container menu-container">
+            <nav className="navbar navbar-expand-md p-0">
+              <a className="navbar-brand p-0 m-0" href="/">
+                <img width="140" className="img-fluid" src="/elrond-wizards-logo.png" />
+              </a>
+
+              <Menu right>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"swiper-collection", true) }>Collections</a>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"team-link", true) }>About Us</a>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"roadmap-link", true) }>Roadmap</a>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"blog-link", true) }>Blog</a>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"contact-link", true) }>Contact</a>
+                <a className="menu-item" href="#">Whitepaper</a>
+              </Menu>
+
+
+              <div className="collapse navbar-collapse d-none d-md-block" id="navbarSupportedContent">
+                <ul className="navbar-nav ">
+                  <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"swiper-collection") }>Collections</a></li>
+                  <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"team-link") }>About Us</a></li>
+                  <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"roadmap-link") }>Roadmap</a></li>
+                  <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"blog-link") }>Blog</a></li>
+                  <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"contact-link") }>Contact</a></li>
+                  <li><a href="/dashboard" className="nav-link">Wallet</a></li>
+                </ul>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-        <ul className="nav-menu-items" onClick={showSidebar}>
-          <li className="navbar-toggle">
-            <Link to="#" className="menu-bars"></Link>
-          </li>
-          {SidebarData.map((item, index) => {
-            return (
-              <li key={index} className={item.cName}>
-                <Link to={item.path}>
-                  {/* {item.icon} */}
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
-          <li className="nav-text">
-            <Link
-              to="#"
-              onClick={() => {
-                window.open(
-                  "https://stelrondwizardsweb.blob.core.windows.net/static/Whitepaper.pdf",
-                );
-              }}
-            >
-              Whitepaper
-            </Link>
-          </li>
-          <li className="nav-text">
-            <Link to="#">Close</Link>
-          </li>
-          {loggedIn && (
-            <li className="nav-text">
-              <Link to="/" onClick={logOut}>
-                Logout
-              </Link>
-            </li>
-          )}
-        </ul>
-      </nav>
     </>
   );
 };

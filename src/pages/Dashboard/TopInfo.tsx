@@ -27,44 +27,44 @@ const TopInfo = () => {
     <div className="text-white" data-testid="topInfo">
       <div className="nft-info">
         <div className="nft-section">
-          <p>Items in Collection:</p>
           <p>{data}</p>
+          <h4>Items in Collection</h4>
         </div>
         <div className="nft-section">
-          <p>Total Supply:</p>
           <p>{total_supply}</p>
+          <h4>Total Supply</h4>
         </div>
         <div className="nft-section">
-          <p>Left to mint:</p>
           <p>{leftToMint}</p>
+          <h4>Left to mint</h4>
         </div>
         <div
           className="nft-section"
           style={{ borderBottom: "none", borderRadius: "5px" }}
         >
-          <p>Minting Price:</p>
           <p>0.75 EGLD</p>
+          <h4>Minting Price</h4>
         </div>
       </div>
       <div className="nft-responsive">
         <div>
           <div className="nft-r-section" style={{ border: "none" }}>
-            <p>Items in Collection:</p>
             <p>{data}</p>
+            <h4>Items in Collection</h4>
           </div>
           <div className="nft-r-section" style={{ borderLeft: "none" }}>
-            <p>Total Supply:</p>
             <p>{total_supply}</p>
+            <h4>Total Supply</h4>
           </div>
         </div>
         <div>
           <div className="nft-r-section" style={{ borderTop: "none" }}>
-            <p>Left to mint:</p>
             <p>{leftToMint}</p>
+            <h4>Left to mint</h4>
           </div>
           <div className="nft-r-section">
-            <p>Minting Price:</p>
             <p>0.75 EGLD</p>
+            <h4>Minting Price</h4>
           </div>
         </div>
       </div>

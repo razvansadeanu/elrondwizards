@@ -1,102 +1,69 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faGithub,
-  faInstagram,
-  faTwitter,
-  faDiscord,
-} from "@fortawesome/free-brands-svg-icons";
-
+// prettier-ignore
 const Footer = () => {
   return (
-    <div style={{ zIndex: 1 }} className="footer">
-      <div className="footerContainer">
-        <div className="introContainer">
-          <p className="introTitle">
-            Elrond Wizards<span className="underline"></span>
-          </p>
-          <p className="footerText">
-            A collection of 3,333 unique NFTs algorithmically generated, living
-            on Elrond blockchain
-          </p>
-          <p className="socialLinks">
-            <span>
-              <FontAwesomeIcon
-                icon={faFacebook}
-                onClick={() =>
-                  window.open(
-                    "https://www.facebook.com/people/Elrond-Wizards/100075376672839/",
-                  )
-                }
-              />
-            </span>
-            <span>
-              <FontAwesomeIcon
-                icon={faGithub}
-                onClick={() =>
-                  window.open(
-                    "https://github.com/razvansadeanu/elrondwizards/tree/master",
-                  )
-                }
-              />
-            </span>
-            <span>
-              <FontAwesomeIcon
-                icon={faInstagram}
-                onClick={() =>
-                  window.open("https://www.instagram.com/elrondwizards/")
-                }
-              />
-            </span>
-            <span>
-              <FontAwesomeIcon
-                icon={faTwitter}
-                onClick={() => window.open("https://twitter.com/ElrondWizards")}
-              />
-            </span>
-            <span>
-              <FontAwesomeIcon
-                icon={faDiscord}
-                onClick={() => window.open("https://discord.gg/FhyTYYKNb2")}
-              />
-            </span>
-          </p>
-        </div>
-        <div className="contactContainer">
-          <div className="contactText">
-            <p className="contactTitle">
-              Contact us
-              <span className="underlineContact"></span>
-            </p>
-            <p
-              className="footerText"
-              onClick={() => window.open("mailto:team@elrondwizards.com")}
-            >
-              team@elrondwizards.com
-            </p>
+    <div>
+      <div className="footer" id="contact-link">
+          <div className="top-footer">
+              <div className="trusted-footer">
+                  <h4>Trusted partners</h4>
+                  <div className="partners-logo">
+                      <img width="400" src="/helios-logo.svg" alt="partners" className="img-fluid"/>
+                      <img width="400" src="/united-logo.svg" alt="partners" className="img-fluid margin-l"/>
+                  </div>
+
+              </div>
+
+              <h4>Get in touch with us</h4>
+              <div className="social-links">
+                  <a target="_blank" rel="noreferrer"  href="https://twitter.com/ElrondWizards">
+                      <img src="/twitter.svg" alt="twitter" className="img-fluid"/>
+                  </a>
+                  <a target="_blank" rel="noreferrer"  href="https://discord.com/invite/bgHuGBvtH6">
+                      <img src="/Discord.svg" alt="discord" className="img-fluid"/>
+                  </a>
+                  <a target="_blank" rel="noreferrer"  href="https://www.instagram.com/elrondwizards/">
+                      <img src="/Instagram.svg" alt="instagram" className="img-fluid"/>
+                  </a>
+                  <a target="_blank" rel="noreferrer"  href="https://github.com/razvansadeanu/elrondwizards/tree/master">
+                      <img src="/GitHub.svg" alt="github" className="img-fluid"/>
+                  </a>
+                  <a target="_blank" rel="noreferrer"  href="https://t.me/ElrondWizards">
+                      <img src="/telegram.svg" alt="telegram" className="img-fluid"/>
+                  </a>
+              </div>
+
+              <a className="mail-link" href="mailto:team@elrondwizards.com">
+                  Or email us at team@elrondwizards.com
+              </a>
           </div>
-        </div>
-        <div className="menuLinksContainer">
-          <div>
-            <p className="linksTitle">
-              Links<span className="underlineLinks"></span>
-            </p>
-            <div className="menuLinks">
-              <Link to="/">Home</Link>
-              <Link to="/">About</Link>
-              <Link to="/">RoadMap</Link>
-              <Link to="/">Use of Funds</Link>
-              <p
-                className="footerText onlyPhone"
-                style={{ marginTop: "2.5rem" }}
-              >
-                © 2021 Elrond Wizards
-              </p>
-            </div>
+          <div className="bottom-footer" style={{ backgroundImage: "url(/footer-bg.png)" }}>
+              <div className="container">
+                  <div className="row">
+                      <div className="col-lg-4  text-lg-left text-center mb-4 mb-lg-0">
+                          <a href="#">
+                              <img width="200" className="img-fluid" src="/elrond-wizards-logo.png" />
+                          </a>
+                      </div>
+                      <div className="col-lg-8  bottom-links">
+                          <div className="bottom-bar">
+                              <p>© 2022, Elrond Wizards</p>
+                              <a href="/cookie-policy">
+                                  Cookie Policy
+                              </a>
+                              <a href="/terms-and-conditions">
+                                  Terms and Conditions
+                              </a>
+                              <a href="/privacy-policy">
+                                  Privacy Policy
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
+
+
       </div>
     </div>
   );

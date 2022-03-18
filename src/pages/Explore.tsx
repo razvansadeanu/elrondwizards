@@ -19,31 +19,32 @@ function Explore() {
     };
     fetchData();
   }, [currentSize]);
+  // prettier-ignore
   return (
-    <div className="row">
-      <div className="col-12 mx-auto">
-        <div className="card shadow-sm rounded border-0">
-          <div className="card-body p-1">
-            <div className="rounded border-0">
-              <div className="explore_row">
-                {data.map((nftData: any, index: any) => (
-                  <img src={nftData?.url} className="nft_img" key={index} />
-                ))}
-                <div>
-                  {size !== currentSize && (
-                    <button
-                      className="btn-load-more"
-                      onClick={() => setCurrentSize(currentSize + 20)}
-                    >
-                      {loading ? "Loading..." : "Load More"}
-                    </button>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="listing-wrapper">
+
+
+      <div className="nfts-list-row">
+        {data.map((nftData: any, index: any) => (
+
+              <img alt="NFT CARD" src={nftData?.url} className="img-fluid" key={index} />
+
+        ))}
+      </div>
+      <div className="col-12 text-center">
+        <div>
+          {size !== currentSize && (
+              <button
+                  className="btn-main"
+                  onClick={() => setCurrentSize(currentSize + 20)}
+              >
+                {loading ? "Loading..." : "Load More"}
+              </button>
+          )}
         </div>
       </div>
+
+
     </div>
   );
 }

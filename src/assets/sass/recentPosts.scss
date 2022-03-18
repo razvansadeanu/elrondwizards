@@ -1,0 +1,65 @@
+.recent-posts h2{
+  font-size: 68px;
+  font-weight: 700 !important;
+  margin-bottom: 44px;
+}
+.recent-posts h3{
+  margin-bottom: 16px;
+  font-size: 28px;
+  font-weight: 700 !important;
+}
+.recent-posts-card{
+  padding: 16px 16px 83px 16px;
+  background-color: #031A27;
+  border: 1px solid #031A27;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+  min-height: 663px;
+}
+.button-read-more {
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+}
+.recent-posts-card:hover{
+  border:1px solid  #6CB0B5;
+}
+.recent-posts p.description-recent-posts{
+  font-size: 22px;
+  font-weight: 400;
+  color: #8B8ACA;
+}
+.legend-wrapper{
+  margin: 16px 0;
+}
+.recent-posts-card .legend-date,
+.recent-posts-card .legend-comments{
+  display: inline-block;
+}
+.recent-posts-card .legend-date p,
+.recent-posts-card .legend-comments p{
+  font-weight: 600;
+  font-size: 13px;
+  color: #8B8ACA;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+.recent-posts-card .legend-date{
+  padding-right: 15px;
+  position: relative;
+}
+.recent-posts-card .legend-comments{
+  padding-left: 15px;
+}
+
+
+
+
+
+@media screen and (max-width: 768px){
+  .recent-posts h2, .recent-posts .h2{
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+}

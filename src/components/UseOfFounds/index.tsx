@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PieChart } from "react-minimal-pie-chart";
-
+// prettier-ignore
 const UseOfFounds = () => {
   const [selected, setSelected] = React.useState<number | undefined>();
   const lineWidth = 70;
@@ -10,76 +10,113 @@ const UseOfFounds = () => {
     setSelected(index === selected ? undefined : index);
   };
   return (
-    <div className="useOfFundsContainer" id="funds">
-      <div className="titleText">
-        <span></span>USE OF FUNDS
-      </div>
-      <div className="useOfFundsContent">
-        <div className="chartContainer">
-          <PieChart
-            style={{
-              fontFamily:
-                "Nunito Sans, -apple-system, Helvetica, Arial, sans-serif",
-              fontSize: "8px",
-            }}
-            data={[
-              { title: "five", value: 15, color: "#0bd2f5" },
-              { title: "four", value: 20, color: "#07a1e985" },
-              { title: "Three", value: 10, color: "#0cf0f0bb" },
-              { title: "Two", value: 30, color: "#03272cca" },
-              {
-                title: "One",
-                value: 25,
-                color: "#045664",
-              },
-            ]}
-            radius={PieChart.defaultProps.radius - 7}
-            lineWidth={lineWidth}
-            segmentsStyle={{
-              transition: "stroke .3s",
-              cursor: "pointer",
-            }}
-            segmentsShift={(index) => (index === selected ? 6 : 1)}
-            animate
-            label={({ dataEntry }) => Math.round(dataEntry.percentage) + "%"}
-            labelPosition={100 - lineWidth / 2}
-            labelStyle={{
-              fill: "#fff",
-              opacity: 0.9,
-              pointerEvents: "none",
-              background: "#0bd2f5",
-              border: "2px solid #0bd2f5",
-            }}
-            onClick={(event, index) => handleChange(event, index)}
-            onMouseOver={(_, index) => {
-              setSelected(index === selected ? undefined : index);
-            }}
-            onMouseOut={() => {
-              setSelected(undefined);
-            }}
-          />
-        </div>
-        <div className="textContainer">
-          <div className="textContent">
-            <p className={selected === 0 ? "active" : ""}>
-              15% - Investigative Journalism
-            </p>
-            <p className={selected === 1 ? "active" : ""}>
-              20% - Reforestation
-            </p>
-            <p className={selected === 2 ? "active" : ""}>
-              10% - Children Foundation
-            </p>
-            <p className={selected === 3 ? "active" : ""}>
-              30% - Future projects
-            </p>
-            <p className={selected === 4 ? "active" : ""}>
-              25% - Investors and Team
-            </p>
+    <div>
+      <div className="funds container">
+        <div className="row">
+
+          <div className="col-12 text-center">
+            <h2>Recent posts</h2>
+          </div>
+
+          <div className="col-xl-3 col-sm-6">
+            <div className="funds-card">
+              <img className="img-fluid w-100" src="/funds-1.png" alt="funds-image"/>
+              <div className="legend-wrapper">
+                <div className="legend-date">
+                  <img src="/calendar-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>24 Oct.2021</p>
+                </div>
+                <div className="legend-comments">
+                  <img src="/message-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>136 COMMENTS</p>
+                </div>
+              </div>
+              <h3>Article title</h3>
+              <p className="description-funds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada lacus, blandit aenean tempus nisi laoreet id congue. Ultricies hendrerit dignissim id suscipit dui mauris, volutpat. Tristique posuere elit conse...</p>
+              <div className="text-right">
+                <a href="#" className="btn-main">
+                  Read more
+                  <img className="img-fluid btn-arrow" src="/arrow-right.svg" alt="arrow"/>
+                </a>
+              </div>
+              </div>
+            </div>
+          <div className="col-xl-3 col-sm-6">
+            <div className="funds-card">
+              <img className="img-fluid w-100" src="/funds-2.png" alt="funds-image"/>
+              <div className="legend-wrapper">
+                <div className="legend-date">
+                  <img src="/calendar-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>24 Oct.2021</p>
+                </div>
+                <div className="legend-comments">
+                  <img src="/message-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>136 COMMENTS</p>
+                </div>
+              </div>
+              <h3>Article title</h3>
+              <p className="description-funds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada lacus, blandit aenean tempus nisi laoreet id congue. Ultricies hendrerit dignissim id suscipit dui mauris, volutpat. Tristique posuere elit conse...</p>
+              <div className="text-right">
+                <a href="#" className="btn-main">
+                  Read more
+                  <img className="img-fluid btn-arrow" src="/arrow-right.svg" alt="arrow"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-sm-6">
+            <div className="funds-card">
+              <img className="img-fluid w-100" src="/funds-3.png" alt="funds-image"/>
+              <div className="legend-wrapper">
+                <div className="legend-date">
+                  <img src="/calendar-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>24 Oct.2021</p>
+                </div>
+                <div className="legend-comments">
+                  <img src="/message-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>136 COMMENTS</p>
+                </div>
+              </div>
+              <h3>Article title</h3>
+              <p className="description-funds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada lacus, blandit aenean tempus nisi laoreet id congue. Ultricies hendrerit dignissim id suscipit dui mauris, volutpat. Tristique posuere elit conse...</p>
+              <div className="text-right">
+                <a href="#" className="btn-main">
+                  Read more
+                  <img className="img-fluid btn-arrow" src="/arrow-right.svg" alt="arrow"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-3 col-sm-6">
+            <div className="funds-card">
+              <img className="img-fluid w-100" src="/funds-4.png" alt="funds-image"/>
+              <div className="legend-wrapper">
+                <div className="legend-date">
+                  <img src="/calendar-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>24 Oct.2021</p>
+                </div>
+                <div className="legend-comments">
+                  <img src="/message-icon.svg" alt="calendar" className="img-fluid"/>
+                  <p>136 COMMENTS</p>
+                </div>
+              </div>
+              <h3>Article title</h3>
+              <p className="description-funds">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada lacus, blandit aenean tempus nisi laoreet id congue. Ultricies hendrerit dignissim id suscipit dui mauris, volutpat. Tristique posuere elit conse...</p>
+              <div className="text-right">
+                <a href="#" className="btn-main">
+                  Read more
+                  <img className="img-fluid btn-arrow" src="/arrow-right.svg" alt="arrow"/>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
