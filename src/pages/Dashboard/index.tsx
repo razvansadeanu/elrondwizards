@@ -77,38 +77,40 @@ const Dashboard = () => {
       />
     );
   }
-
+  // prettier-ignore
   return (
-    <div className="container py-4" ref={ref}>
-      <div className="row">
-        <div className="col-12 col-md-10 mx-auto">
-          <div className="navs">
-            <div
-              className={`nav-buy ${activeTab.tab1 ? "tab-active" : ""}`}
-              onClick={handleTabSwitch}
-            >
-              <span>Buy</span>
-            </div>
-            <div
-              className={`nav-nft ${activeTab.tab2 ? "tab-active" : ""}`}
-              onClick={handleTabSwitch}
-            >
-              <span>My NFT</span>
-            </div>
-            <div
-              className={`nav-explore ${activeTab.tab3 ? "tab-active" : ""}`}
-              onClick={handleTabSwitch}
-            >
-              <span>Explore</span>
+    <div className="container py-4 dashboard-nft" ref={ref}>
+      <div className="wrap-dashboard" style={{ backgroundImage: "url(/nft-list-bg.png)" }}>
+        <div className="row">
+          <div className="col-12">
+            <div className="navs">
+              <div
+                  className={`nav-buy nft-tab ${activeTab.tab1 ? "tab-active" : ""}`}
+                  onClick={handleTabSwitch}
+              >
+                <span>Buy</span>
+              </div>
+              <div
+                  className={`nav-nft nft-tab ${activeTab.tab2 ? "tab-active" : ""}`}
+                  onClick={handleTabSwitch}
+              >
+                <span>My NFT</span>
+              </div>
+              <div
+                  className={`nav-explore nft-tab ${activeTab.tab3 ? "tab-active" : ""}`}
+                  onClick={handleTabSwitch}
+              >
+                <span>Explore</span>
+              </div>
             </div>
           </div>
         </div>
+        {(() => {
+          if (activeTab.tab1) return <Buy />;
+          if (activeTab.tab2) return <NFT />;
+          if (activeTab.tab3) return <Explore />;
+        })()}
       </div>
-      {(() => {
-        if (activeTab.tab1) return <Buy />;
-        if (activeTab.tab2) return <NFT />;
-        if (activeTab.tab3) return <Explore />;
-      })()}
     </div>
   );
 };

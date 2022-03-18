@@ -19,7 +19,7 @@ export default function App() {
                 <Dapp.Pages.Unlock
                   callbackRoute={routeNames.dashboard}
                   title={config.dAppName}
-                  lead="Please select your login method:"
+                  lead="Select your login method"
                   ledgerRoute={routeNames.ledger}
                   walletConnectRoute={routeNames.walletconnect}
                 />

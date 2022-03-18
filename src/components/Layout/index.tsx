@@ -14,24 +14,11 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [loggedIn]);
-
+  // prettier-ignore
   return (
     <div className="d-flex flex-column flex-fill wrapper">
-      <video
-        className="background-video"
-        src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
-        playsInline
-        autoPlay
-        loop
-        muted
-      >
-        <source
-          src="https://stelrondwizardsweb.blob.core.windows.net/static/Background.mp4"
-          type="video/mp4"
-        />
-      </video>
       <Navbar />
-      <main style={{ zIndex: 1 }} className="d-flex flex-column flex-grow-1">
+      <main style={{ zIndex: 1 , backgroundImage: "url(/lines.png)"}} className="d-flex flex-column flex-grow-1 login-wrap">
         <Dapp.Authenticate routes={routes} unlockRoute={routeNames.unlock}>
           {children}
         </Dapp.Authenticate>

@@ -10,6 +10,8 @@ const NFT = () => {
     account: { balance },
   } = Dapp.useContext();
 
+  const rarityScore = "null";
+
   React.useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
@@ -33,113 +35,78 @@ const NFT = () => {
   //     console.log(nftsNumber);
   //   }
   // }, [nfts]);
-
+  // prettier-ignore
   return (
-    <div className="row">
+    <div className="row nft-tab">
       <div className="col-12 mx-auto">
         <div className="card shadow-sm rounded border-0">
           <div className="card-body p-1">
             <div className="rounded border-0">
               <div className="nft_row">
                 {nfts.map((nft: any, index: any) => (
-                  <div className="nft_row_cont" key={index}>
-                    <div className="nft_container">
-                      <img src={nft.url} alt="" />
-                      <div className="nft_props">
-                        <div className="nft_info">
-                          <h3>Details</h3>
-                          <div className="nft_text">
-                            <span> Name</span> <span>{nft.name}</span>
-                          </div>
-                          <div className="nft_text">
-                            <span>Rarity score</span>
-                            <span>
-                              {nft?.metadata.rarity.rarityScore.toFixed(3)}
-                            </span>
-                          </div>
-                          <div className="nft_text">
-                            <span>Identifier</span>{" "}
-                            <span className="nft_prop">{nft.identifier}</span>
+                  <div className="nft_row_cont w-100" key={index}>
+                    <div className="nft_container w-100">
+
+                      <div className="row">
+                        <div className="col-md-4 text-center">
+                          <img className="img-fluid" src={nft.url} alt="" />
+                        </div>
+                        <div className="col-md-8">
+                          <div className="nft_props">
+
+                            <div className="nft_info">
+                              <h3>{nft.name}</h3>
+
+
+                              <div className="nft_text">
+                                <span className="green-text">Rarity: </span>
+                                <span>{nft?.metadata.rarity?.rarityScore ? nft?.metadata.rarity?.rarityScore.toFixed(3) : rarityScore}</span>
+                              </div>
+
+                              <div className="nft_text">
+                                <span className="green-text">Identifier:</span>{" "}
+                                <span className="nft_prop">{nft.identifier}</span>
+                              </div>
+
+                            </div>
+
+                            <div className="nft_att">
+                              <div className="nft_att_table">
+                                <div className="nft_att_col">
+                                  {nft?.metadata.attributes
+                                      .slice(0, 10)
+                                      .map((attribute: any, index: any) => (
+                                          <div key={index} className="nft_text">
+                                            <div className="text-wrapper">
+                                              <span className="green-text">{attribute.trait_type}</span>
+                                              <span>{attribute.value}</span>
+                                            </div>
+                                          </div>
+                                      ))}
+
+                                  {nft?.metadata.attributes
+                                      .slice(10, 20)
+                                      .map((attribute: any, index: any) => (
+                                          <div key={index} className="nft_text">
+                                            <div className="text-wrapper">
+                                              <span className="green-text">{attribute.trait_type}</span>
+                                              <span>{attribute.value}</span>
+                                            </div>
+                                          </div>
+                                      ))}
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                      </div>
 
-                        <div className="nft_att">
-                          <h3>Properties:</h3>
-                          <div className="nft_att_table">
-                            <div className="nft_att_col">
-                              {nft?.metadata.attributes
-                                .slice(0, 10)
-                                .map((attribute: any, index: any) => (
-                                  <div key={index} className="nft_text">
-                                    <span>{attribute.trait_type}</span>
-                                    <span>{attribute.value}</span>
-                                  </div>
-                                ))}
-                            </div>
-                            <div className="nft_att_col">
-                              {nft?.metadata.attributes
-                                .slice(10, 20)
-                                .map((attribute: any, index: any) => (
-                                  <div key={index} className="nft_text">
-                                    <span>{attribute.trait_type}</span>
-                                    <span>{attribute.value}</span>
-                                  </div>
-                                ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="nft_responsive">
-                      {/* <h3>Details</h3> */}
-                      <div className="nft_text">
-                        <span> Name</span> <span>{nft.name}</span>
-                      </div>
-                      {/* <div className="nft_text">
-                        <span>Rarity score</span>
-                        <span>
-                          {nft?.metadata.rarity.rarityScore.toFixed(3)}
-                        </span>
-                      </div> */}
-                      <div className="nft_text">
-                        <span>Identifier</span>{" "}
-                        <span className="nft_prop">{nft.identifier}</span>
-                      </div>
-                    </div>
-                    <div className="nft_att_responsive">
-                      {/* <h3>Properties:</h3> */}
 
-                      <div className="nft_att_col">
-                        {nft?.metadata.attributes
-                          .slice(0, 7)
-                          .map((attribute: any, index: any) => (
-                            <div key={index} className="nft_text">
-                              <span>{attribute.trait_type}</span>
-                              <span>{attribute.value}</span>
-                            </div>
-                          ))}
-                      </div>
-                      <div className="nft_att_col">
-                        {nft?.metadata.attributes
-                          .slice(7, 14)
-                          .map((attribute: any, index: any) => (
-                            <div key={index} className="nft_text">
-                              <span>{attribute.trait_type}</span>
-                              <span>{attribute.value}</span>
-                            </div>
-                          ))}
-                      </div>
-                      <div className="nft_att_col">
-                        {nft?.metadata.attributes
-                          .slice(14, 20)
-                          .map((attribute: any, index: any) => (
-                            <div key={index} className="nft_text">
-                              <span>{attribute.trait_type}</span>
-                              <span>{attribute.value}</span>
-                            </div>
-                          ))}
-                      </div>
+
+
                     </div>
+
+
                   </div>
                 ))}
               </div>

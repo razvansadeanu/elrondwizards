@@ -17,8 +17,8 @@ Override Bootstrap variables only above.
 @import "./../../../node_modules/@elrondnetwork/dapp-utils/dist/dapp-utils.scss";
 
 //Font
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;800&display=swap');
 // Locals
 @import "./breakpoints.scss";
 @import "./header.scss";
@@ -28,25 +28,37 @@ Override Bootstrap variables only above.
 @import "./roadMap.scss";
 @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 @import "./useOfFounds.scss";
+@import "./recentPosts.scss";
 @import "./footer.scss";
 
 /* Base
 -------------------------------------------------- */
-html {
-  min-height: 100%;
-  font-size: 14px;
-}
+
 body {
-  font-family: "Jura", sans-serif;
+  font-family: 'Barlow', sans-serif;
+}
+@media (min-width: 576px){
+  .container, .container-sm {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px){
+  .container, .container-sm, .container-md {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px){
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px){
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1470px;
+  }
 }
 
-.wrapper {
-  min-height: 100vh;
-}
 
-.opacity-6 {
-  opacity: 0.6;
-}
 
 .dapp-icon {
   padding: 5px;
@@ -64,23 +76,565 @@ body {
     height: 80px;
   }
 }
-/* Video
+/* Head
 -------------------------------------------------- */
-.background-video {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 0;
-  opacity: 1;
+.btn-main,
+.btn.btn-primary,
+.action-btn button.btn-main{
+  position: relative;
+  background: linear-gradient(135deg, #973DDD 0%, #CA3ADA 100%);
+  border-radius: 6px;
+  padding-top: 9px !important;
+  padding-right: 17px !important;
+  padding-bottom: 9px !important;
+  padding-left: 24px !important;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s all ease-in-out;
+  border:1px solid #CA3ADA;
+  display: inline-block;
+  text-decoration: none;
 }
+.btn-main:hover,
+.btn.btn-primary:hover,
+.action-btn button.btn-main:hover{
+  color:#fff;
+  background: transparent;
+  border: 1px solid #CA3ADA;
+  text-decoration: none;
+}
+.action-btn button.btn-main{
+  margin-top: 8px;
+}
+a{
+  text-decoration: none;
+}
+.btn-main-inverted{
+  position: relative;
+  background: transparent;
+  border-radius: 6px;
+  padding: 9px 17px 9px 24px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s all ease-in-out;
+  border:1px solid #CA3ADA;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-main-inverted:hover{
+  color:#fff;
+  background: linear-gradient(135deg, #973DDD 0%, #CA3ADA 100%);
+  border: 1px solid #CA3ADA;
+  text-decoration: none;
+}
+.btn-main img,
+.btn-main-inverted img{
+  margin-left: 2px;
+  margin-top: -4px;
+}
+@media screen and (max-width: 992px){
+  .head p{
+    font-size: 16px;
+  }
+}
+.wrapper-top-bg{
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+[data-testid="unlockPage"] .card,
+.login-wrap .login-container .card{
+  background: linear-gradient(262.11deg, rgba(0, 225, 255, 0) -0.25%, rgba(0, 225, 255, 0.2) 49.65%, rgba(20, 165, 174, 0) 100%);
+  background-color: transparent;
+  box-shadow: none;
+  margin: 16px;
+}
+[data-testid="unlockPage"]{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-wrap{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+[data-testid="unlockPage"] .card .card-body,
+.login-wrap .login-container .card .card-body{
+  padding-left:55px !important;
+  padding-right: 55px !important;
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+[data-testid="unlockPage"] .card .card-body .btn.btn-primary,
+.login-wrap .login-container .card .card-body .btn.btn-primary{
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 20px;
+  font-weight: 500;
+  border:1px solid #CA3ADA !important;
+  margin-left: 0 !important;
+  margin-right: 16px !important;
+  margin-bottom: 16px !important;
+}
+[data-testid="unlockPage"] .card .card-body .btn.btn-primary:last-child,
+.login-wrap .login-container .card .card-body .btn.btn-primary:last-child{
+  margin-right: 0 !important;
+}
+[data-testid="unlockPage"] .card h4,
+.login-wrap .login-container .card h4{
+  font-size: 34px;
+  font-weight: 700 !important;
+  margin-bottom: 16px !important;
+}
+[data-testid="unlockPage"] .card p,
+.login-wrap .login-container .card p{
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 32px !important;
+  color: #6CB0B5;
+}
+
+.login-wrap .login-container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px !important;
+}
+
+
+.dashboard-nft{
+  padding-top: 150px !important;
+  height: 100%;
+  min-height: 1080px;
+}
+
+.dashboard-nft .navs{
+  background: #031A27;
+  border-radius: 100px;
+  font-size: 24px;
+  box-shadow:none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.dashboard-nft .navs span{
+  font-weight: 500;
+}
+.dashboard-nft .navs .nft-tab{
+  margin: 16px;
+  border-radius: 100px;
+  background: transparent;
+  transition: 0.3s all ease-in-out;
+}
+.dashboard-nft .navs .nft-tab:hover{
+  background: linear-gradient(135deg, #973DDD 0%, #CA3ADA 100%);
+  box-shadow: none;
+}
+.dashboard-nft .navs .nft-tab.tab-active{
+  background: linear-gradient(135deg, #973DDD 0%, #CA3ADA 100%);
+  box-shadow: none;
+}
+
+.buy-nft.card,
+.buy-nft .card{
+  box-shadow: none;
+}
+.wrap-dashboard{
+  max-width: 960px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+}
+.wrap-buy{
+  max-width: 590px;
+  margin: 0 auto;
+}
+.wrap-buy .gifImage{
+  border-radius: 0 88px;
+  height: auto;
+}
+.wrap-buy .nft-info .nft-section {
+  background-color: transparent;
+  border-bottom: none;
+  padding: 0 0 24px 0;
+  margin-top: 0;
+}
+.wrap-buy .nft-info{
+  margin-top: 45px;
+  text-align: left;
+}
+
+.buy-nft .container-flex .left-part {
+  background-color: transparent;
+  border-radius: 0;
+}
+.buy-nft .container-flex{
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+.wrap-buy .nft-info .nft-section p{
+  margin-bottom: 0;
+}
+.wrap-buy h4{
+  font-weight: 400;
+  font-size: 22px;
+  color: #6CB0B5;
+  margin-bottom: 0;
+}
+.wrap-buy p{
+  font-weight: 700 !important;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.card-body .explore_row{
+  height: 100%;
+}
+.nft-tab .nft_row .nft_row_cont {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 2rem;
+}
+
+.nft-tab .nft_row .nft_row_cont img {
+  width: auto;
+  max-height: 525px;
+  object-fit: contain;
+  border-radius: 0 88px;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container{
+  padding:55px 16px;
+  display: inline-block;
+  justify-content: normal;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props{
+  display: inline-block;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_info{
+  display: inline-block;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_att_table{
+  display: inline-block;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_att_table .nft_att_col{
+  margin-left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_info .nft_text{
+  display: block;
+  flex-direction: row;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 8px;
+  align-items: normal;
+  width: auto;
+}
+.nft-tab h3{
+  margin-bottom: 32px;
+  font-weight: 700 !important;
+  font-size: 22px;
+}
+.nft-tab .green-text{
+  font-weight: 600;
+  font-size: 17px;
+  color: #6CB0B5;
+}
+
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att{
+  display: block;
+  flex-direction: row;
+  align-items: normal;
+  margin-top: 30px;
+}
+.nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_text {
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: block;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  padding:0;
+  margin:0;
+}
+.nft-tab .text-wrapper{
+  background: linear-gradient(180deg, #084161 0%, rgba(3, 26, 39, 0) 100%);
+  border-radius: 4px;
+  padding: 8px 4px 8px 8px;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  flex-direction: column;
+  font-size: 1.1rem;
+  border: 1px solid #0d405f;
+}
+.nft-tab .text-wrapper span.green-text{
+  font-size: 12px;
+  font-weight: 400 !important;
+  margin-bottom: 8px;
+}
+.nft-tab .text-wrapper  span{
+  font-size: 12px;
+  display: block;
+  font-weight: 600 !important;
+  margin-bottom: 0;
+}
+.nfts-list-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 8px;
+
+}
+.listing-wrapper img{
+  flex: 25%;
+  height: 340px;
+  border-radius: 0 88px;
+  padding: 8px;
+}
+a:active,
+a:focus,
+a:focus-within,
+a:target,
+a:hover,
+a:visited,
+a:focus-visible{
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -webkit-border: none !important;
+  -webkit-outline: none !important;
+  border: none !important;
+}
+a:-webkit-any-link:focus-visible {
+  outline-offset: unset !important;
+}
+.bm-item{
+  background-clip: padding-box !important;
+}
+
+.bm-item-list a:active { text-decoration: none }
+@mixin tab-focus() {
+  // Default
+  outline: none !important;
+  // WebKit
+  outline-offset: 0 !important;
+}
+@media screen and (max-width: 510px){
+  .listing-wrapper img{
+    height: 100%;
+  }
+}
+.wrapper-story{
+  padding-top: 55px;
+}
+.wrapper-story h1{
+  font-size: 68px;
+  font-weight: 700 !important;
+  margin-bottom: 32px;
+}
+.wrap-gdpr h2{
+  font-weight: 700 !important;
+  margin-top: 30px;
+}
+.margin-l{
+  margin-top: -35px;
+}
+@media screen and (min-width: 992px){
+  .text-lg-left{
+    text-align: left !important;
+  }
+}
+@media screen and (max-width: 1200px){
+  .wrapper-story h1{
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px){
+  .margin-l{
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 576px){
+  .wrapper-story h1{
+    font-size: 40px;
+  }
+  .wrap-gdpr h2{
+    font-size: 26px;
+  }
+}
+.wrap-gdpr .trusted-footer{
+  display: none;
+}
+.links-story{
+  padding: 32px 16px 30px 16px;
+}
+.links-story a{
+  margin-bottom: 24px;
+}
+
+
+
+@media screen and (max-width: 1200px){
+  .nft-tab .nft_row .nft_row_cont img{
+    height: auto;
+  }
+  .recent-posts-card{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 992px){
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_text {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att{
+    margin-left: 0;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att{
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px){
+  [data-testid="unlockPage"] .card .card-body{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .wrap-buy h4{
+    font-size:16px;
+  }
+  .wrap-buy p {
+    font-size: 22px;
+  }
+  .buy-nft .container-flex {
+    padding-top: 0 !important;
+  }
+  .wrap-buy .d-flex{
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .dashboard-nft .navs .nft-tab{
+    padding: 5px;
+    margin: 10px 16px;
+  }
+  .nft-tab h3{
+    margin-top: 50px;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att{
+    margin-top: 20px;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container{
+    padding: 30px 16px;
+  }
+  .dashboard-nft {
+    padding-top: 120px !important;
+  }
+}
+@media screen and (max-width: 576px){
+  [data-testid="unlockPage"] .card{
+    margin-top: 100px !important;
+  }
+  .dashboard-nft .navs{
+    flex-direction: column;
+    padding: 0 30px;
+    margin: 16px;
+    border-radius: 40px
+  }
+  .wrap-dashboard {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  .wrap-buy .nft-responsive{
+    background: transparent;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_text {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+@media screen and (max-width: 400px){
+  [data-testid="unlockPage"] .card .card-body .btn.btn-primary,
+  .login-wrap .login-container .card .card-body .btn.btn-primary{
+    margin-bottom: 9px !important;
+    margin-right: 0 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    display: block;
+    width: 100%;
+  }
+  .login-wrap .login-container .card .card-body{
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  [data-testid="unlockPage"],
+  .login-wrap .login-container{
+    width: 100%;
+    padding: 16px;
+  }
+  [data-testid="unlockPage"] .card,
+  .login-wrap .login-container .card{
+    margin-top: 100px !important;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .nft-tab .nft_row .nft_row_cont .nft_container .nft_props .nft_att .nft_text {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Navbar
 -------------------------------------------------- */
 .elrond-logo {
   width: 85px;
   height: 25px;
+}
+.wrapper{
+  background-color: #0e111a;
 }
 
 .dapp-name {
@@ -89,22 +643,28 @@ body {
   padding-left: 3px;
   margin-left: 4px;
 }
-
+@media screen and (max-width: 992px){
+  body .head p,
+  .our-collection p,
+  .wrapper-team p,
+  .roadmap p,
+  .funds p.description-funds{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px){
+  .our-collection h2,
+  .wrapper-team h2,
+  .roadmap h2,
+  .funds h2{
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+}
 /* Dashboard
 -------------------------------------------------- */
 .action-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: $black;
-  border-radius: 5px;
-  background-color: $green;
-  padding: 0px 0px 0px 0px;
-  font-size: 1.5rem;
-
-  width: 100%;
-  color: white;
+  display: inline-block;
   button {
     padding: 30px 0 30px 0;
     border-radius: 5px;
@@ -246,7 +806,7 @@ body {
 .home-page {
   color: $light;
   -webkit-tap-highlight-color: transparent;
-  scroll-behavior: smooth;
+
 }
 
 /* Unlock
@@ -647,3 +1207,107 @@ body {
     }
   }
 }
+
+/* Explore
+-------------------------------------------------- */
+
+.explore_row {
+  height: 300px;
+  display: flex;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.nft_img {
+  object-fit: contain;
+  max-height: 350px;
+  width: 100%;
+  margin: 10px;
+  border-radius: 15px;
+  @include media("<=1200px") {
+    max-height: 400px;
+  }
+  @include media("<=990px") {
+    max-height: 300px;
+  }
+  @include media("<=480px") {
+    max-height: 300px;
+    margin: 3px;
+  }
+  @include media("<=460px") {
+    max-height: 250px;
+    margin: 2px;
+  }
+  @include media("<=385px") {
+    max-height: 350px;
+    margin: 5px 10px 5px 10px;
+  }
+  // @include media("<=450px") {
+  //   max-height: 250px;
+  //   margin: 2px;
+  // }
+}
+.explore_row > img {
+  flex: 1 1 150px;
+  background-color: #000;
+  padding: 15px 5px 15px 5px;
+  @include media("<=480px") {
+    padding: 10px 2px 10px 2px;
+  }
+  @include media("<=385px") {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+.explore_row > div {
+  flex: 1 1 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 5px 50px 5px;
+}
+
+.btn-load-more {
+  padding: 15px 40px 15px 40px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  background-color: #000;
+  border: none;
+  color: white;
+  box-shadow: 0px 3px 10px $black;
+}
+/* Our story page */
+
+.our-story-page {
+  color: $light;
+  -webkit-tap-highlight-color: transparent;
+
+  .back-video {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    opacity: 0.1;
+  }
+  padding-top: 100px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: initial;
+  }
+}
+/* Our story page */
+
+/* Custom pages */
+
+.page-custom {
+  color: $light;
+  -webkit-tap-highlight-color: transparent;
+  padding-top: 100px;
+}
+/* Custom pages */
+

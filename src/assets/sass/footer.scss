@@ -1,172 +1,105 @@
-.footer {
-  margin-top: 8rem;
-  padding: 1.5rem;
-  box-shadow: 0 -5px 8px -5px #7e7e7e;
+.footer{
+  padding-top: 68px;
+}
+.top-footer{
+  text-align: center;
+}
+.social-links a{
+  display: inline-block;
+  margin-right: 24px;
+  transition: 0.3s all ease-in-out;
+}
+.social-links a:last-child{
+  margin-right: 0;
+}
+.social-links a:hover{
+  transform:scale(1.1);
+}
+.top-footer h4{
+  font-size: 34px;
+  font-weight: 700 !important;
+  margin-bottom: 32px;
+}
+.top-footer .partners-logo{
+  margin-bottom: 120px;
+}
+.social-links{
+  margin-bottom: 32px;
+}
+.top-footer .mail-link{
+  font-size: 22px;
+  font-weight: 600;
+  color: #6CB0B5;
+  transition: 0.3s all ease-in-out;
+  padding-bottom: 68px;
+  display: block;
+}
+.top-footer .mail-link:hover{
+  color: #6CB0B5;
+}
+.bottom-footer{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 18px 0;
+}
+.bottom-bar p,
+.bottom-bar a{
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0;
   color: white;
-  @include media("<=700px") {
-    margin-top: 2rem;
-  }
-  .footerContainer {
-    max-width: 1300px;
-    margin: 2rem auto;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 0 10px;
+  transition: 0.3s all ease-in-out;
+}
+.bottom-bar a:hover{
+  color: #973DDD;
+  text-decoration: none;
+}
+.bottom-bar p:after,
+.bottom-bar a:after{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  right: 0;
+  bottom: 7px;
+}
+.bottom-bar a:last-child:after{
+  content: none;
+}
+.bottom-links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 992px){
+  .bottom-links{
     display: flex;
-    justify-content: space-between;
-    @include media("<=700px") {
-      flex-direction: column;
-    }
-    .footerText {
-      margin-top: 0.6rem;
-      font-size: 1.1rem;
-      line-height: 1.8rem;
-      opacity: 0.8;
-      margin-bottom: 1rem;
-
-      transition: all 0.3s ease-in-out;
-      @include media("<=1100px") {
-        font-size: 1rem;
-      }
-      @include media("<=700px") {
-        font-size: 1.1rem;
-      }
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-      }
-    }
-    .introContainer {
-      display: flex;
-      flex-direction: column;
-      width: 33%;
-      @include media("<=1000px") {
-        width: 45%;
-      }
-      @include media("<=700px") {
-        width: 80%;
-      }
-      @include media("<=550px") {
-        width: 100%;
-      }
-      .introTitle {
-        font-size: 1.4rem;
-        font-weight: 500;
-        .underline {
-          height: 2px;
-          width: 165px;
-          margin-top: 4px;
-          background-color: $green;
-          border-radius: 100%;
-          display: block;
-        }
-      }
-      .socialLinks {
-        display: flex;
-        span {
-          transition: all 0.3s ease-in-out;
-          margin-right: 30px;
-          font-size: 1.5rem;
-          opacity: 0.8;
-          @include media("<=1100px") {
-            font-size: 1.3rem;
-          }
-          &:hover {
-            cursor: pointer;
-            opacity: 1;
-          }
-        }
-      }
-    }
-    .contactContainer {
-      width: 33%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-direction: column;
-      @include media("<=1000px") {
-        width: 35%;
-      }
-      @include media("<=700px") {
-        margin-top: 2.5rem;
-        width: 100%;
-        align-items: flex-start;
-      }
-      .contactText {
-        .contactTitle {
-          font-size: 1.4rem;
-          font-weight: 500;
-          .underlineContact {
-            height: 2px;
-            width: 120px;
-            margin-top: 4px;
-            background-color: $green;
-            border-radius: 100%;
-            display: block;
-          }
-        }
-      }
-    }
-    .menuLinksContainer {
-      display: flex;
-      font-size: 1.6rem;
-      flex-direction: column;
-
-      @include media("<=1000px") {
-        width: 25%;
-        align-items: center;
-      }
-      @include media("<=700px") {
-        width: 100%;
-        margin-top: 1.5rem;
-        align-items: flex-start;
-      }
-      .linksTitle {
-        font-size: 1.4rem;
-        font-weight: 500;
-        .underlineLinks {
-          height: 2px;
-          width: 60px;
-          margin-top: 4px;
-          background-color: $green;
-          border-radius: 100%;
-          display: block;
-        }
-      }
-      .menuLinks {
-        margin-top: 0.6rem;
-        font-size: 1.1rem;
-        display: flex;
-        transition: all 0.3s ease-in-out;
-        @include media("<=1100px") {
-          font-size: 1rem;
-        }
-        @include media("<=1000px") {
-          flex-direction: column;
-        }
-        @include media("<=700px") {
-          flex-direction: column;
-          font-size: 1.1rem;
-        }
-        a {
-          opacity: 0.8;
-          text-decoration: none;
-          color: white;
-          margin-right: 12px;
-          @include media("<=1000px") {
-            margin-right: 0px;
-            margin-bottom: 8px;
-          }
-          &:hover {
-            cursor: pointer;
-            opacity: 1;
-          }
-        }
-        .onlyPhone {
-          display: none;
-          @include media("<=700px") {
-            display: block;
-            font-size: 1.1rem;
-          }
-        }
-      }
-    }
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .top-footer .partners-logo {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 576px){
+  .social-links a{
+    margin-bottom: 10px;
+  }
+  .partners-logo img{
+    width: 250px !important;
+  }
+}
+@media screen and (max-width: 405px){
+  .bottom-bar a:after,
+  .bottom-bar p:after{
+    content: none;
   }
 }
