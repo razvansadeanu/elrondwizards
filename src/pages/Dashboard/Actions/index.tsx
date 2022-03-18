@@ -115,7 +115,7 @@ const Actions = () => {
   const mintTransaction: RawTransactionType = {
     data: payload,
     receiver: contractAddress,
-    value: "0.75",
+    value: "0.5",
     gasLimit: 100000000,
   };
   // prettier-ignore
