@@ -42,7 +42,7 @@ const TopInfo = () => {
           className="nft-section"
           style={{ borderBottom: "none", borderRadius: "5px" }}
         >
-          <p>0.75 EGLD</p>
+          <p>0.5 EGLD</p>
           <h4>Minting Price</h4>
         </div>
       </div>
@@ -63,7 +63,7 @@ const TopInfo = () => {
             <h4>Left to mint</h4>
           </div>
           <div className="nft-r-section">
-            <p>0.75 EGLD</p>
+            <p>0.5 EGLD</p>
             <h4>Minting Price</h4>
           </div>
         </div>
