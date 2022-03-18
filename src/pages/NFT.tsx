@@ -10,7 +10,7 @@ const NFT = () => {
     account: { balance },
   } = Dapp.useContext();
 
-  const rarityScore = "null"
+  const rarityScore = "null";
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -60,7 +60,7 @@ const NFT = () => {
 
                               <div className="nft_text">
                                 <span className="green-text">Rarity: </span>
-                                <span>{nft?.metadata.rarity?.rarityScore : nft?.metadata.rarity?.rarityScore.toFixed(3) ? rarityScore}</span>
+                                <span>{nft?.metadata.rarity?.rarityScore ? nft?.metadata.rarity?.rarityScore.toFixed(3) : rarityScore}</span>
                               </div>
 
                               <div className="nft_text">
