@@ -116,7 +116,7 @@ const Actions = () => {
     data: payload,
     receiver: contractAddress,
     value: "0.5",
-    gasLimit: 100000000,
+    gasLimit: 500000000,
   };
   // prettier-ignore
   return (
