@@ -54,6 +54,40 @@
 .our-collection .btn-main{
   margin-right: 16px;
 }
+.bubble-text{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width: 100%;
+}
+.blob h4,
+.wrap-ball-mobile h4{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700 !important;
+  font-size: 54px;
+  color: white;
+  line-height: 1;
+}
+.blob h4 span,
+.wrap-ball-mobile h4 span{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400 !important;
+  font-size: 34px;
+  color: white;
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.blob h5,
+.wrap-ball-mobile h5{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400 !important;
+  font-size: 22px;
+  color: #8B8ACA;
+  line-height: 1;
+  margin-bottom: 0;
+}
 
 .ball-top{
   position: absolute;
@@ -78,9 +112,38 @@
   top: 31%;
   width: 39%;
 }
+.wrap-ball-mobile{
+  position: relative;
+  //animation: pulse-black 3s infinite;
+}
+.wrap-text-mobile{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width: 100%;
+}
+.balls-mobile .col-6{
+  margin-bottom: 30px;
+}
+.balls-mobile{
+  padding: 0 20px;
+}
+
 @media screen and (min-width: 1200px){
   .wrapper-bubbles{
     padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 1400px){
+  .blob h4{
+    font-size: 42px;
+  }
+  .blob h4 span{
+    font-size: 24px;
+  }
+  .blob h5{
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 1200px){
@@ -132,24 +195,28 @@
 }
 
 
-.blob {
+.blob,
+.ballm-1{
   transform: scale(1);
   animation: pulse-black 3s infinite;
   border-radius: 50%;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
 }
-.blob.ball-top {
+.blob.ball-top,
+.ballm-2{
   transform: scale(1);
   animation: pulse-black 3s infinite;
   animation-delay: 0.3s;
 }
-.blob.ball-bottom {
+.blob.ball-bottom,
+.ballm-3{
   transform: scale(1);
   animation: pulse-black 3s infinite;
   animation-delay: 0.5s;
 }
-.blob.ball-left {
+.blob.ball-left,
+.ballm-4{
   transform: scale(1);
   animation: pulse-black 3s infinite;
   animation-delay: 0.7s;
@@ -227,5 +294,17 @@
 @media screen and (max-width: 576px){
   .our-collection .btn-main{
     margin-bottom: 10px;
+  }
+  .balls-mobile {
+    padding: 0;
+  }
+  .wrap-ball-mobile h4{
+    font-size:30px;
+  }
+  .wrap-ball-mobile h4 span{
+    font-size: 20px;
+  }
+  .wrap-ball-mobile h5{
+    font-size: 18px;
   }
 }
