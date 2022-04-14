@@ -427,6 +427,8 @@ a:-webkit-any-link:focus-visible {
 }
 .bm-item{
   background-clip: padding-box !important;
+  outline-style: none !important;
+  outline-width: 0 !important;
 }
 
 .bm-item-list a:active { text-decoration: none }

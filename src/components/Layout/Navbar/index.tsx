@@ -1,7 +1,20 @@
 import React, { useState } from "react";
+import * as Dapp from "@elrondnetwork/dapp";
+import { Link, useHistory } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 
 const Navbar = () => {
+  const { loggedIn } = Dapp.useContext();
+  const dappLogout = Dapp.useLogout();
+  const history = useHistory();
+
+  const logOut = (e: React.MouseEvent) => {
+    e.preventDefault();
+    dappLogout({ callbackUrl: `${window.location.origin}/` });
+    history.push("/");
+  };
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
   const scrollToAnchor = (
     e: { preventDefault: () => void },
     id: string,
@@ -41,7 +54,16 @@ const Navbar = () => {
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"roadmap-link", true) }>Roadmap</a>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"blog-link", true) }>Blog</a>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"contact-link", true) }>Contact</a>
-                <a className="menu-item" href="#">Whitepaper</a>
+                {/* <a className="menu-item" href="#">Whitepaper</a> */}
+                {loggedIn ? (
+                    <Link className="menu-item" to="/" onClick={logOut}>
+                      Logout
+                    </Link>
+                ) : (
+                    <Link className="menu-item" to="/dashboard">
+                      Wallet
+                    </Link>
+                )}
               </Menu>
 
 
@@ -52,7 +74,17 @@ const Navbar = () => {
                   <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"roadmap-link") }>Roadmap</a></li>
                   <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"blog-link") }>Blog</a></li>
                   <li><a href="#" className="nav-link" onClick={ e => scrollToAnchor(e,"contact-link") }>Contact</a></li>
-                  <li><a href="/dashboard" className="nav-link">Wallet</a></li>
+                  {/* <li><a href="/dashboard" className="nav-link">Wallet</a></li> */}
+                  <li>{loggedIn ? (
+                      <Link className="nav-link" to="/" onClick={logOut}>
+                        Logout
+                      </Link>
+                      ) : (
+                      <Link className="nav-link" to="/dashboard">
+                        Wallet
+                      </Link>
+                      )}
+                  </li>
                 </ul>
               </div>
             </nav>
