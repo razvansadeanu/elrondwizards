@@ -10,7 +10,7 @@ const NFT = () => {
     account: { balance },
   } = Dapp.useContext();
 
-  const rarityScore = "null";
+  const rarityScore = "undefined";
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -43,6 +43,8 @@ const NFT = () => {
           <div className="card-body p-1">
             <div className="rounded border-0">
               <div className="nft_row">
+              {!nfts ? <div>Loading your NFTS </div> :
+              <> 
                 {nfts.map((nft: any, index: any) => (
                   <div className="nft_row_cont w-100" key={index}>
                     <div className="nft_container w-100">
@@ -60,7 +62,7 @@ const NFT = () => {
 
                               <div className="nft_text">
                                 <span className="green-text">Rarity: </span>
-                                <span>{nft?.metadata.rarity?.rarityScore ? nft?.metadata.rarity?.rarityScore.toFixed(3) : rarityScore}</span>
+                                <span>{nft?.metadata?.rarity.rarityScore ? nft?.metadata.rarity?.rarityScore.toFixed(3) : rarityScore}</span>
                               </div>
 
                               <div className="nft_text">
@@ -73,7 +75,7 @@ const NFT = () => {
                             <div className="nft_att">
                               <div className="nft_att_table">
                                 <div className="nft_att_col">
-                                  {nft?.metadata.attributes
+                                  {nft?.metadata?.attributes
                                       .slice(0, 10)
                                       .map((attribute: any, index: any) => (
                                           <div key={index} className="nft_text">
@@ -84,7 +86,7 @@ const NFT = () => {
                                           </div>
                                       ))}
 
-                                  {nft?.metadata.attributes
+                                  {nft?.metadata?.attributes
                                       .slice(10, 20)
                                       .map((attribute: any, index: any) => (
                                           <div key={index} className="nft_text">
@@ -108,7 +110,9 @@ const NFT = () => {
 
 
                   </div>
-                ))}
+                ))}</>
+                                      }
+                                    
               </div>
             </div>
           </div>
