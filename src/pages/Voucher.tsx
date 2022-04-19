@@ -163,10 +163,11 @@ function Voucher({ walletStatus, timeDifference }: any) {
                       <p>
                         In collaboration with our friends from Gastro Bistro we
                         decided that everyone with at least one wizzard in their
-                        wallet is eligible for a 20 % discount. Feel free to
-                        check the offers and details of our partners. Please
-                        keep in mind that you can generate just one voucher once
-                        at 24h.
+                        wallet is eligible for a{" "}
+                        <span className="voucher-procent">20%</span> discount.
+                        Feel free to check the offers and details of our
+                        partners. Please keep in mind that you can generate just
+                        one voucher once at 24h.
                       </p>
                       {(() => {
                         if (walletStatus.notEligible)

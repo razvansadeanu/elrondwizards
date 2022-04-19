@@ -1346,8 +1346,17 @@ a:-webkit-any-link:focus-visible {
      @media (max-width: 770px){
       font-size: 1.1rem;
     }
-    @media (max-width: 670px){
-      font-size: 1rem;
+    .voucher-procent{
+      font-weight: 500;
+      font-size: 1.3rem;
+      color:#CA3ADA;
+      @media (max-width: 770px){
+        font-size: 1.2rem;
+      }
+      @media (max-width: 670px){
+        font-size: 1.2rem;
+      }
+      
     }
   }
 
@@ -1410,7 +1419,7 @@ a:-webkit-any-link:focus-visible {
 .info-messsage{
   margin-top: 30px;
   color:#fff;
-  font-size: 1rem !important;
+  font-size: 1.1rem !important;
   display: flex;
   align-items: center;
   span{
