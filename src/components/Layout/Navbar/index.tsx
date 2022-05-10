@@ -12,6 +12,7 @@ const Navbar = () => {
     e.preventDefault();
     dappLogout({ callbackUrl: `${window.location.origin}/` });
     history.push("/");
+    hideMenu(e, true);
   };
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
