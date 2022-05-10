@@ -408,6 +408,13 @@ a{
   border-radius: 0 88px;
   padding: 8px;
 }
+@media screen and (max-width: 720px){
+  .listing-wrapper img{
+    height: auto;
+    padding: 20px;
+  }
+
+}
 a:active,
 a:focus,
 a:focus-within,
