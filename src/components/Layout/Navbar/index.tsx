@@ -37,7 +37,7 @@ const Navbar = () => {
 
               <Menu right>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"swiper-collection", true) }>Collections</a>
-                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"team-link", true) }>About Us</a>
+                <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"team-link", true) }>Despre noi</a>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"roadmap-link", true) }>Roadmap</a>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"blog-link", true) }>Blog</a>
                 <a className="menu-item" href="#" onClick={ e => scrollToAnchor(e,"contact-link", true) }>Contact</a>
